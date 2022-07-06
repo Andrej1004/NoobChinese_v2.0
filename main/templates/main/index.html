@@ -1,0 +1,116 @@
+{% load static %}
+<html>
+	<head>
+		<title>NoobChinese</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+	</head>
+	<body>
+		<!-- шапка сайта -->
+		<header>
+			<!-- название сайта -->
+			<div id="title">
+				<p>NoobChinese</p>
+			</div>
+			<!-- меню сайта -->
+			<div id="mainMenu">
+				<!-- кнопки -->
+				<div class="button" id="btn-1">
+					<p>иероглифы<p>
+					<!-- ссылки -->
+					<!-- иероглифы -->
+					<div class="button-ref">
+						<a href="{% url 'hanzi_hsk_1' %}"><p>hsk-1<p></a>
+					</div>
+					<div class="button-ref">
+						<a href="{% url 'hanzi_hsk_2' %}"><p>hsk-2<p></a>
+					</div>
+					<div class="button-ref">
+						<a href="{% url 'hanzi_hsk_3' %}"><p>hsk-3<p></a>
+					</div>
+				</div>
+				<div class="button" id="btn-2">
+					<p>слова<p>
+					<!-- ссылки -->
+					<div class="button-ref">
+						<a href="{% url 'words_hsk_1_3' %}"><p>hsk 1-3<p></a>
+					</div>
+				</div>
+				<div class="button" id="btn-3">
+					<p>советы<p>
+					<!-- ссылки -->
+					<div class="button-ref">
+						<a href="{% url 'kak_uchit_yazuk' %}"><p>Как учить язык быстрее<p></a>
+					</div>
+					<div class="button-ref">
+						<a href="{% url 'spaced_repetition' %}"><p>Как учить слова<p></a>
+					</div>
+				</div>
+				<div class="button" id="btn-4">
+					<p>читать<p>
+					<!-- ссылки -->
+					<div class="button-ref">
+						<a href="{% url 'reading' %}"><p>параллельные тексты<p></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="about">
+				<p class="aboutTitle">О сайте</p>
+				<p class="aboutMain">
+					Добро пожаловать на мой небольшой сайт об изучении китайского языка.
+					<br>
+					<br>
+					Сайт возник из желания сделать доступный список слов для HSK разбитый по темам и частям речи.
+					Со временем появилась идея добавить списки иероглифов по уровням HSK, советы как быстрее и эффективнее учить язык, тексты для чтения.
+					<br>
+					<br>
+					В целом это просто отражение прогресса автора в изучении китайского языка.
+					И содержимое не является истиной в последней инстанции.
+					Но я надеюсь, что он сможет помочь тем, кто, как и я, изучает китайский самостоятельно.
+					<br>
+					<br>
+					Сайт создан в образовательных и не преследует никаких комерческий целей.
+				</p>
+				<p class="aboutTitle">
+					Что здесь есть?
+				</p>
+				<p class="aboutMain">
+					<b>Иероглифы</b> по HSK
+					<br>
+					Большинство иероглифов имеет множество значений, в данном разделе представленны только самые распространенные, которые слелдует запомнить.
+					Значения выбраны на основе <a href="https://bkrs.info/"><b>БКРС</b></a>
+					Если вы заметиле не точность, просим вас сообщить на почту.
+					<br>
+					<br>
+					<b>Слова</b> для HSK по темам, так же планируется список наиболее употребительных слов китайского языка (первые 5000)
+					<br>
+					<b>Советы</b> для более быстрого и качественного изучения языка
+					<br>
+					<b>Тексты</b> для чтения на китайском и японском.
+					<br>
+					Планируется раздел с грамматикой
+
+				</p>
+				<p class="aboutTitle">
+					Как лучше использовать сайт?
+				</p>
+				<p class="aboutMain">
+					Прочитайте <a href="{% url 'spaced_repetition' %}"><b>советы по изучению слов</b></a>
+					<br>
+					Начните учить слова
+					<br>
+					Параллельно можно запоминать значения отдельных иероглифов
+				</p>
+			</div>
+		</main>
+		<footer>
+			<div id="footerBackground">
+				<a class="footerText" href="mailto:NoobChinese@yandex.ru">связаться с автором</a>
+				<br>
+				<a class="footerText" href="https://unsplash.com/photos/vHf8wYS2aeY?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">photos by unsplash.com</a>
+			</div>
+		</footer>
+	</body>
+</html>

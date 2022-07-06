@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'main/css/AddText.css' %}">
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<p id="title-text">добавить текст</p>
+				<div class="GoBack">
+					<a href="{% url 'reading' %}"><p>назад</p></a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="helper">
+				<p id="v_word"></p>
+				<p id="v_reading"></p>
+				<p id="v_meaning"></p>
+			</div>
+			<div id="add_translation_to_word_menu">
+				<form>
+					<label>Слово <input type="text" id="word"></label>
+					<br>
+					<label>Чтение <input type="text" id="reading"></label>
+					<br>
+					<label>Перевод <input type="text" id="translation"></label>
+					<br>
+					<button class="button" id="save_translation">Сохранить перевод</button>
+				</form>
+			</div>
+			<div id="help">
+				<p id="help_title">Помощь по добавлению текста</p>
+				<p>
+					Введите название текста, оригинал и перевод, затем нажмите «готово» для начала работы.
+					Для добавления подсказок выберите левой кнопкой мыши группу слов оригинала и соответствующие им слова перевода и нажмите «сохранить соответствие», затем выберете следующую группу.
+					Для добавления подсказки кликните правой кнопкой мыши на нужное слово оригинала, в контекстном меню введите перевод  и, если нужно, транскрипцию затем нажмите «сохранить перевод».
+					Для проверки результата нажмите «тестировать».
+					Если все правильно, кликните «сохранить на сайте».
+					Текст будет добавлен после проверки администратором.
+					<br>
+					Замечание для языков, не использующих пробелов:
+					Для корректной работы при вводе на китайском или японском разделяйте слова пробелами.
+					Также ставте их после знаков припинания, например после "。"
+				</p>
+			</div>
+			<div>
+				<form>
+					<input id="input_1" placeholder="введите название текста">
+					<textarea class="textfield" id="original_text" placeholder="введите оригинальный текст"></textarea>
+					<textarea class="textfield" id="translation_text" placeholder="введите введите перевод"></textarea>
+					<div id="buttons">
+						<button class="button" id="done">готово</button>
+						<button class="button" id="save">Сохранить соответствие</button>
+						<button class="button" id="test">Тестировать</button>
+						<button class="button" id="sendToServer">Сохранить на сайте</button>
+					</div>
+				</form>
+			</div>
+			<div id="work_space">
+				<div id="work_original"></div>
+				<div id="work_translation"></div>
+			</div>
+			<div>
+				<div>
+					<p id="final_original_text"></p>
+				</div>
+				<div>
+					<p id="final_translation_text"></p>
+				</div>
+			</div>
+		</main>
+		<script src="{% static 'main/js/AddText.js' %}"></script>
+	</body>
+</html>

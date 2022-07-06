@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+	<head>
+		<title>ChineseIsEasy</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="{% static 'main/css/reading.css' %}">
+	</head>
+	<body>
+		<!-- шапка сайта -->
+		<header>
+			<div id="header">
+				<p id="title-text">Параллельные тексты</p>
+				<div class="GoBack">
+					<a href="{% url 'home' %}"><p>на главную</p></a>
+				</div>
+				<div class="GoBack" id="addtext">
+					<a href="{% url 'AddText' %}"><p>Добавить текст</p></a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="text">
+				В этом разделе вы найдете тексты для чтения, параллельные тексты на китайском и японском языке.
+				Для эффективного использования вам следует знать базовую лексику и грамматику.
+				Все иероглифические сочетания имеют перевод.
+				Вы можете увидеть его, подведя курсор к интересующему вас слову.
+				Для корректной работы у вашего браузера должен быть включен JavaScript.
+				К сожалению, пока раздел не может пополняться быстро.
+				Вы можете помочь развитию сайта добавив свои тексты для чтения, перейдя в раздел по добавлению текстов.
+				<br>
+				Все тексты размещены исклчительно в образовательных целях и не преследуют никаких комерческих целей.
+				<br>
+				Приятного чтения.
+				<br>
+				Ящик для ваших вопросов и предложений: <a class="footerText" href="mailto:NoobChinese@yandex.ru">NoobChinese@yandex.ru</a>
+			</div>
+			<div id="articles">
+				{% for text in paralleltext %}
+				{% if text.showOnSite %}
+				<a href="{% url 'article' text.slug %}"><p class="refToArticle">{{ text.slug }}</p></a>
+				{% endif %}
+				{% endfor %}
+			</div>
+			<div class="button" id="buttonPeople" onclick="getButtonID(this)">
+				<p>Нацумэ Сосэки. Сердце.<br>Японский и русский паралельные тексты</p>
+			</div>
+			<div class="ChaptersList" id="heart">
+				<div id="t1">
+					<a href="{% url 'NatsumeSosekiHeart' %}"><p>Часть 1. Глава 1<p></a>
+				</div>
+				<div id="t2">
+					<p id="dscrpt1">
+						Нацумэ Сосэки – один из основателей современной японской литературы.
+						Предлагаем вашему вниманию один из самых продаваемых романов японской литературы – «Сердце».
+						Входит в японскую школьную программу.
+						Вы сможете окунуться в жизнь Японии периода Мэйдзи (1868-1912).
+						<br>
+						Полный оригинальный текст на <a href="https://www.aozora.gr.jp/cards/000148/card773.html">青空文庫</a>
+						<br>
+						Весь перевод Н.И.Конрада на русский <a href="https://librebook.me/kokoro">librebook.me</a>
+					</p>
+					<a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%86%D1%83%D0%BC%D1%8D_%D0%A1%D0%BE%D1%81%D1%8D%D0%BA%D0%B8" title="wiki Нацумэ Сосэки"><img src="{% static 'main/img/Natsume.jpg' %}" id="img1"></a>
+				</div>
+			</div>
+		</main>
+		<script src="{% static 'main/js/reading.js' %}"></script>
+	</body>
+</html>

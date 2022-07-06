@@ -1,0 +1,3329 @@
+{% load static %}
+<html>
+	<head>
+		<title>WordsHSK1-3</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="{% static 'main/css/mainWords.css' %}">
+		<meta name="keywords" content="hsk,слова по темам">
+	</head>
+	<body>
+		<div class="GoBack">
+			<a href="{% url 'home' %}"><p>на главную</p></a>
+		</div>
+		<div class="ShowOrHideExamples" onclick="ShowOrHide()">
+			<p>Показать примеры</p>
+		</div>
+		<!-- Люди -->
+		<div class="button" id="buttonPeople" onclick="getButtonID(this)">
+			<p>Люди</p>
+		</div>
+		<table class="wordsList" id="tablePeople">
+			<tbody>
+				<tr class="word" id="1" onclick="getWordID(this)">
+					<td class="chinese">妈妈</td>
+					<td class="pinyin">māma</td>
+					<td class="translation">мама</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">妈妈在看电视</td>
+					<td class="pinyin">Māmā zài kàn diànshì</td>
+					<td class="translation">мама смотрит телевизор</td>
+				</tr>
+				<tr class="word" id="2" onclick="getWordID(this)">
+					<td class="chinese">爸爸</td>
+					<td class="pinyin">bāba</td>
+					<td class="translation">папа</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">爸爸喜欢喝茶</td>
+					<td class="pinyin">bàba xǐhuān hē chá</td>
+					<td class="translation">папа любит пить чай</td>
+				</tr>
+				<tr class="word" id="3" onclick="getWordID(this)">
+					<td class="chinese">儿子</td>
+					<td class="pinyin">érzi</td>
+					<td class="translation">сын</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我儿子五岁了</td>
+					<td class="pinyin">Wǒ érzi wǔ suìle</td>
+					<td class="translation">моему сыну пять лет</td>
+				</tr>
+				<tr class="word" id="4" onclick="getWordID(this)">
+					<td class="chinese">女儿</td>
+					<td class="pinyin">nǚer</td>
+					<td class="translation">дочь</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我有一个女儿</td>
+					<td class="pinyin">Wǒ yǒu yīgè nǚ'ér</td>
+					<td class="translation">У меня есть дочь</td>
+				</tr>
+				<tr class="word" id="5" onclick="getWordID(this)">
+					<td class="chinese">孩子</td>
+					<td class="pinyin">háizi</td>
+					<td class="translation">ребенок, дети</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">孩子对妈妈说：<br>“妈妈，我爱你”</td>
+					<td class="pinyin">Háizi duì māmā shuō:<br>Māmā, wǒ ài nǐ</td>
+					<td class="translation">ребенок сказал маме:<br>"мама я тебя люблю"</td>
+				</tr>
+				<tr class="word" id="6" onclick="getWordID(this)">
+					<td class="chinese">哥哥</td>
+					<td class="pinyin">gēge</td>
+					<td class="translation">старший брат</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">哥哥的眼睛是<br>什么颜色的？</td>
+					<td class="pinyin">Gēgē de yǎnjīng shì<br>shénme yánsè de?</td>
+					<td class="translation">Какого цвета глаза<br>у брата?</td>
+				</tr>
+				<tr class="word" id="7" onclick="getWordID(this)">
+					<td class="chinese">姐姐</td>
+					<td class="pinyin">jiějie</td>
+					<td class="translation">старшая сестра</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">姐姐跑得快</td>
+					<td class="pinyin">Jiějiě pǎo dé kuài</td>
+					<td class="translation">Сестра быстро бегает</td>
+				</tr>
+				<tr class="word" id="8" onclick="getWordID(this)">
+					<td class="chinese">弟弟</td>
+					<td class="pinyin">dìdi</td>
+					<td class="translation">младший брат</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">哥哥比弟弟高</td>
+					<td class="pinyin">Gēgē bǐ dìdì gāo</td>
+					<td class="translation">старший брат<br>выше младшего</td>
+				</tr>
+				<tr class="word" id="9" onclick="getWordID(this)">
+					<td class="chinese">妹妹</td>
+					<td class="pinyin">meìmei</td>
+					<td class="translation">младшая сестра</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">给你介绍我妹妹</td>
+					<td class="pinyin">Gěi nǐ jièshào wǒ mèimei</td>
+					<td class="translation">Познакомлю тебя<br>с моей сестрой</td>
+				</tr>
+				<tr class="word" id="10" onclick="getWordID(this)">
+					<td class="chinese">爷爷</td>
+					<td class="pinyin">yéye</td>
+					<td class="translation">дедушка</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">爷爷六十岁了</td>
+					<td class="pinyin">Yéyé liùshí suìle</td>
+					<td class="translation">Дедушке уже 60</td>
+				</tr>
+				<tr class="word" id="11" onclick="getWordID(this)">
+					<td class="chinese">奶奶</td>
+					<td class="pinyin">nǎinai</td>
+					<td class="translation">бабушка</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">奶奶非常喜欢<br>我们送的礼物</td>
+					<td class="pinyin">Nǎinai fēicháng xǐhuān<br>wǒmen sòng de lǐwù</td>
+					<td class="translation">бабушке очень <br>понравились подарки,<br>которые мы отправили</td>
+				</tr>
+				<tr class="word" id="12" onclick="getWordID(this)">
+					<td class="chinese">叔叔</td>
+					<td class="pinyin">shūshu</td>
+					<td class="translation">дядя</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">叔叔，你喜欢<br>这本书吗？</td>
+					<td class="pinyin">Shūshu, nǐ xǐhuān<br>zhè běn shū ma?</td>
+					<td class="translation">Дядя тебе нравится<br> эта книга?</td>
+				</tr>
+				<tr class="word" id="13" onclick="getWordID(this)">
+					<td class="chinese">阿姨</td>
+					<td class="pinyin">āyí</td>
+					<td class="translation">тётя; служанка</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">阿姨，附近有<br>地铁站吗？</td>
+					<td class="pinyin">Āyí, fùjìn yǒu<br> dìtiě zhàn ma?</td>
+					<td class="translation">Тётя рядом есть метро?</td>
+				</tr>
+				<tr class="word" id="14" onclick="getWordID(this)">
+					<td class="chinese">丈夫</td>
+					<td class="pinyin">zhàngfu</td>
+					<td class="translation">муж</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我丈夫在<br>医院工作</td>
+					<td class="pinyin">Wǒ zhàngfū zài<br>yīyuàn gōngzuò</td>
+					<td class="translation">мой муж работает<br> в больнице</td>
+				</tr>
+				<tr class="word" id="15" onclick="getWordID(this)">
+					<td class="chinese">妻子</td>
+					<td class="pinyin">qīzi</td>
+					<td class="translation">жена</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我妻子上班去了</td>
+					<td class="pinyin">Wǒ qīzi shàngbān qùle</td>
+					<td class="translation">моя жена ушла на работу</td>
+				</tr>
+				<tr class="word" id="16" onclick="getWordID(this)">
+					<td class="chinese">名字</td>
+					<td class="pinyin">míngzì</td>
+					<td class="translation">имя; название</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">你的名字是什么？</td>
+					<td class="pinyin">Nǐ de míngzì shì shénme?</td>
+					<td class="translation">Как тебя зовут?</td>
+				</tr>
+				<tr class="word" id="17" onclick="getWordID(this)">
+					<td class="chinese">姓</td>
+					<td class="pinyin">xíng</td>
+					<td class="translation">фамилия</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我姓张</td>
+					<td class="pinyin">Wǒ xìng zhāng</td>
+					<td class="translation">Моя фамилия Чжан</td>
+				</tr>
+				<tr class="word" id="18" onclick="getWordID(this)">
+					<td class="chinese">先生</td>
+					<td class="pinyin">xiānsheng</td>
+					<td class="translation">господин</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">她和王先生<br>说话呢</td>
+					<td class="pinyin">Tā hé wáng xiānshēng<br>shuōhuà ne</td>
+					<td class="translation">Она разговаривает<br>с госпадином Ваном</td>
+				</tr>
+				<tr class="word" id="19" onclick="getWordID(this)">
+					<td class="chinese">小姐</td>
+					<td class="pinyin">xiǎojiě</td>
+					<td class="translation">барышня</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">小姐学习<br>怎么做衣服</td>
+					<td class="pinyin">Xiǎojiě xuéxí<br>zěnme zuò yīfú</td>
+					<td class="translation">девушка учится<br>шить одежду</td>
+				</tr>
+				<tr class="word" id="20" onclick="getWordID(this)">
+					<td class="chinese">人</td>
+					<td class="pinyin">rén</td>
+					<td class="translation">человек</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我的医生<br>是一个好人</td>
+					<td class="pinyin">Wǒ de yīshēng<br>shì yīgè hǎorén</td>
+					<td class="translation">мой врач<br>хороший человек</td>
+				</tr>
+				<tr class="word" id="21" onclick="getWordID(this)">
+					<td class="chinese">朋友</td>
+					<td class="pinyin">péngyǒu</td>
+					<td class="translation">друг</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">他是我的好朋友</td>
+					<td class="pinyin">Tā shì wǒ de hǎo péngyǒu</td>
+					<td class="translation">он мой хороший друг</td>
+				</tr>
+				<tr class="word" id="22" onclick="getWordID(this)">
+					<td class="chinese">同学</td>
+					<td class="pinyin">tóngxué</td>
+					<td class="translation">одноклассник</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">星期天同学<br>请我去<br>饭馆吃饭</td>
+					<td class="pinyin">xīngqītiān tóngxué<br>qǐng wǒ qù<br>fànguǎn chīfàn</td>
+					<td class="translation">в воскресенье однокласникк<br>позвал меня<br>есть в ресторан</td>
+				</tr>
+				<tr class="word" id="23" onclick="getWordID(this)">
+					<td class="chinese">学生</td>
+					<td class="pinyin">xuésheng</td>
+					<td class="translation">ученик</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">那些学生<br>不听老师</td>
+					<td class="pinyin">Nàxiē xuéshēng<br>bù tīng lǎoshī</td>
+					<td class="translation">те ученики<br>не слушают учителя</td>
+				</tr>
+				<tr class="word" id="24" onclick="getWordID(this)">
+					<td class="chinese">老师</td>
+					<td class="pinyin">lǎoshī</td>
+					<td class="translation">учитель</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">老师看见<br>我在桌子上<br>写东西</td>
+					<td class="pinyin">Lǎoshī kànjiàn<br>wǒ zài zhuōzi shàng<br>xiě dōngxī</td>
+					<td class="translation">учитель увидел<br>что я нарисовал<br>на столе</td>
+				</tr>
+				<tr class="word" id="25" onclick="getWordID(this)">
+					<td class="chinese">校长</td>
+					<td class="pinyin">xiàozhǎng</td>
+					<td class="translation">дирректор</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">请问，<br>校长办公室<br>怎么走？</td>
+					<td class="pinyin">Qǐngwèn,<br>xiàozhǎng bàngōngshì<br>zěnme zǒu?</td>
+					<td class="translation">извените,<br>как пройти<br>в кабинет директора</td>
+				</tr>
+				<tr class="word" id="26" onclick="getWordID(this)">
+					<td class="chinese">医生</td>
+					<td class="pinyin">yīshēng</td>
+					<td class="translation">врач, доктор</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">张医生<br>今年45岁</td>
+					<td class="pinyin">Zhāng yīshēng<br>jīnnián 45 suì</td>
+					<td class="translation">доктору Чжану<br>в этом году 45 лет</td>
+				</tr>
+				<tr class="word" id="27" onclick="getWordID(this)">
+					<td class="chinese">经理</td>
+					<td class="pinyin">jīnglǐ</td>
+					<td class="translation">менеджер, управляющий</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">这件事是<br>经理决定的</td>
+					<td class="pinyin">Zhè jiàn shì shì<br>jīnglǐ juédìng de</td>
+					<td class="translation">это задание<br>придумал управляющий</td>
+				</tr>
+				<tr class="word" id="28" onclick="getWordID(this)">
+					<td class="chinese">同事</td>
+					<td class="pinyin">tóngshì</td>
+					<td class="translation">сослуживец, коллега</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">这是我们的<br>新同事，<br>李华</td>
+					<td class="pinyin">Zhè shì wǒmen de<br>xīn tóngshì,<br>lǐ huá</td>
+					<td class="translation">Это наш<br>новай коллега,<br>ли хуа</td>
+				</tr>
+				<tr class="word" id="29" onclick="getWordID(this)">
+					<td class="chinese">司机</td>
+					<td class="pinyin">sījī</td>
+					<td class="translation">водитель</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">这位司机<br>开出租车<br>5 年多了</td>
+					<td class="pinyin">Zhè wèi sījī<br>kāi chūzū chē<br>5 nián duōle</td>
+					<td class="translation">этот водитель<br>водит такси<br>уже 5 лет</td>
+				</tr>
+				<tr class="word" id="30" onclick="getWordID(this)">
+					<td class="chinese">服务员</td>
+					<td class="pinyin">fúwùyuán</td>
+					<td class="translation">официант</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">穿红衣服的<br>是服务员</td>
+					<td class="pinyin">Chuān hóng yīfú de<br>shì fúwùyuán</td>
+					<td class="translation">носящий красную одежду<br>это официант</td>
+				</tr>
+				<tr class="word" id="31" onclick="getWordID(this)">
+					<td class="chinese">客人</td>
+					<td class="pinyin">kèren</td>
+					<td class="translation">гость</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我们热情地<br>欢迎客人</td>
+					<td class="pinyin">Wǒmen rèqíng de<br>huānyíng kèrén</td>
+					<td class="translation">мы тепло<br>встретили гостей</td>
+				</tr>
+				<tr class="word" id="32" onclick="getWordID(this)">
+					<td class="chinese">邻居</td>
+					<td class="pinyin">línjū</td>
+					<td class="translation">сосед</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">我跟邻居们的<br>关系非常好</td>
+					<td class="pinyin">Wǒ gēn línjūmen de<br>guānxì fēicháng hǎo</td>
+					<td class="translation">у меня хорошие<br>отношения с соседями</td>
+				</tr>
+				<tr class="word" id="33" onclick="getWordID(this)">
+					<td class="chinese">别人</td>
+					<td class="pinyin">biéren</td>
+					<td class="translation">другие (люди)</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">你怎么这么关心<br>别人的生活</td>
+					<td class="pinyin">nǐ zěnme zhème guānxīn<br>biéren de shēnghuó</td>
+					<td class="translation">Почему тебя так интересна<br>жизнь другого человека?</td>
+				</tr>
+				<tr class="word" id="34" onclick="getWordID(this)">
+					<td class="chinese">其他</td>
+					<td class="pinyin">qítā</td>
+					<td class="translation">другой</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">只有玛莎在教室里，<br>其他人都回家了</td>
+					<td class="pinyin">Zhǐyǒu mǎshā zài jiàoshì lǐ,<br>qítā rén dōu huí jiāle</td>
+					<td class="translation">только Маша в классе,<br>остальные уже ушли</td>
+				</tr>
+				<tr class="word" id="35" onclick="getWordID(this)">
+					<td class="chinese">自己</td>
+					<td class="pinyin">zìjǐ</td>
+					<td class="translation">сам, себя</td>
+				</tr>
+				<tr class="example">
+					<td class="chinese">他把科学<br>看得比自己的生命<br>更重要</td>
+					<td class="pinyin">Tā bǎ kēxué<br>kàn dé bǐ zìjǐ de shēngmìng<br>gèng zhòngyào</td>
+					<td class="translation">для него наука<br>важнее собственной жизни</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Тело -->
+		<div class="button" id="buttonBodyParts" onclick="getButtonID(this)">
+				<p>Тело</p>
+		</div>
+		<table class="wordsList" id="tableBodyParts">
+			<tbody>
+				<tr>
+					<td class="chinese">脸</td>
+					<td class="pinyin">liǎn</td>
+					<td class="translation">лицо</td>
+				</tr>
+				<tr>
+					<td class="chinese">眼睛</td>
+					<td class="pinyin">yǎnjīng</td>
+					<td class="translation">глаз</td>
+				</tr>
+				<tr>
+					<td class="chinese">耳朵</td>
+					<td class="pinyin">ěrduo</td>
+					<td class="translation">ухо</td>
+				</tr>
+				<tr>
+					<td class="chinese">鼻子</td>
+					<td class="pinyin">bízi</td>
+					<td class="translation">нос</td>
+				</tr>
+				<tr>
+					<td class="chinese">口</td>
+					<td class="pinyin">kǒu</td>
+					<td class="translation">рот</td>
+				</tr>
+				<tr>
+					<td class="chinese">嘴</td>
+					<td class="pinyin">zuǐ</td>
+					<td class="translation">рот</td>
+				</tr>
+				<tr>
+					<td class="chinese">头发</td>
+					<td class="pinyin">tóufa</td>
+					<td class="translation">волосы</td>
+				</tr>
+				<tr>
+					<td class="chinese">腿</td>
+					<td class="pinyin">tuǐ</td>
+					<td class="translation">нога</td>
+				</tr>
+				<tr>
+					<td class="chinese">脚</td>
+					<td class="pinyin">jiǎo</td>
+					<td class="translation">стопа</td>
+				</tr>
+				<tr>
+					<td class="chinese">个子</td>
+					<td class="pinyin">gèzi</td>
+					<td class="translation">рост</td>
+				</tr>
+				<tr>
+					<td class="chinese">声音</td>
+					<td class="pinyin">shēngyīn</td>
+					<td class="translation">голос; звук</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Животные -->
+		<div class="button" id="buttonAnimals" onclick="getButtonID(this)">
+				<p>Животные</p>
+		</div>
+		<table class="wordsList" id="tableAnimals">
+			<tbody>
+				<tr>
+					<td class="chinese">猫</td>
+					<td class="pinyin">māo</td>
+					<td class="translation">кошка</td>
+				</tr>
+				<tr>
+					<td class="chinese">狗</td>
+					<td class="pinyin">gǒu</td>
+					<td class="translation">собака</td>
+				</tr>
+				<tr>
+					<td class="chinese">马</td>
+					<td class="pinyin">mǎ</td>
+					<td class="translation">лошадь</td>
+				</tr>
+				<tr>
+					<td class="chinese">熊猫</td>
+					<td class="pinyin">xióngmāo</td>
+					<td class="translation">панда</td>
+				</tr>
+				<tr>
+					<td class="chinese">鸟</td>
+					<td class="pinyin">niǎo</td>
+					<td class="translation">птица</td>
+				</tr>
+				<tr>
+					<td class="chinese">动物</td>
+					<td class="pinyin">dòngwù</td>
+					<td class="translation">животное</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Природа -->
+		<div class="button" id="buttonNature" onclick="getButtonID(this)">
+				<p>Природа</p>
+		</div>
+		<table class="wordsList" id="tableNature">
+			<tbody>
+				<tr>
+					<td class="chinese">太阳</td>
+					<td class="pinyin">tàiyāng</td>
+					<td class="translation">солнце</td>
+				</tr>
+				<tr>
+					<td class="chinese">月亮</td>
+					<td class="pinyin">yùeliang</td>
+					<td class="translation">луна</td>
+				</tr>
+				<tr>
+					<td class="chinese">树</td>
+					<td class="pinyin">shū</td>
+					<td class="translation">дерево</td>
+				</tr>
+				<tr>
+					<td class="chinese">花</td>
+					<td class="pinyin">huā</td>
+					<td class="translation">цветок</td>
+				</tr>
+				<tr>
+					<td class="chinese">草</td>
+					<td class="pinyin">cǎo</td>
+					<td class="translation">трава</td>
+				</tr>
+				<tr>
+					<td class="chinese">雪</td>
+					<td class="pinyin">xuě</td>
+					<td class="translation">снег</td>
+				</tr>
+				<tr>
+					<td class="chinese">天气</td>
+					<td class="pinyin">tiānqì</td>
+					<td class="translation">погода</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Еда -->
+		<div class="button" id="buttonFood" onclick="getButtonID(this)">
+				<p>Еда</p>
+		</div>
+		<table class="wordsList" id="tableFood">
+			<tbody>
+				<tr>
+					<td class="chinese">菜</td>
+					<td class="pinyin">cài</td>
+					<td class="translation">блюдо; овощи</td>
+				</tr>
+				<tr>
+					<td class="chinese">菜单</td>
+					<td class="pinyin">càidān</td>
+					<td class="translation">меню</td>
+				</tr>
+				<tr>
+					<td class="chinese">水</td>
+					<td class="pinyin">shuǐ</td>
+					<td class="translation">вода</td>
+				</tr>
+				<tr>
+					<td class="chinese">茶</td>
+					<td class="pinyin">chá</td>
+					<td class="translation">чай</td>
+				</tr>
+				<tr>
+					<td class="chinese">咖啡</td>
+					<td class="pinyin">kāfeī</td>
+					<td class="translation">кофе</td>
+				</tr>
+				<tr>
+					<td class="chinese">牛奶</td>
+					<td class="pinyin">niúnǎi</td>
+					<td class="translation">молоко</td>
+				</tr>
+				<tr>
+					<td class="chinese">饮料</td>
+					<td class="pinyin">yǐnliào</td>
+					<td class="translation">питье, напиток</td>
+				</tr>
+				<tr>
+					<td class="chinese">啤酒</td>
+					<td class="pinyin">píjiǔ</td>
+					<td class="translation">пиво</td>
+				</tr>
+				<tr>
+					<td class="chinese">米饭</td>
+					<td class="pinyin">mǐfàn</td>
+					<td class="translation">варёный рис</td>
+				</tr>
+				<tr>
+					<td class="chinese">苹果</td>
+					<td class="pinyin">píngguǒ</td>
+					<td class="translation">яблоко</td>
+				</tr>
+				<tr>
+					<td class="chinese">香蕉</td>
+					<td class="pinyin">xiāngjiāo</td>
+					<td class="translation">банан</td>
+				</tr>
+				<tr>
+					<td class="chinese">西瓜</td>
+					<td class="pinyin">xīguā</td>
+					<td class="translation">арбуз</td>
+				</tr>
+				<tr>
+					<td class="chinese">水果</td>
+					<td class="pinyin">shuǐguǒ</td>
+					<td class="translation">фрукты</td>
+				</tr>
+				<tr>
+					<td class="chinese">面条</td>
+					<td class="pinyin">miàntiáo</td>
+					<td class="translation">лапша</td>
+				</tr>
+				<tr>
+					<td class="chinese">面包</td>
+					<td class="pinyin">miànbāo</td>
+					<td class="translation">хлеб</td>
+				</tr>
+				<tr>
+					<td class="chinese">蛋糕</td>
+					<td class="pinyin">dàngāo</td>
+					<td class="translation">торт</td>
+				</tr>
+				<tr>
+					<td class="chinese">鸡蛋</td>
+					<td class="pinyin">jīdàn</td>
+					<td class="translation">яйца</td>
+				</tr>
+				<tr>
+					<td class="chinese">鱼</td>
+					<td class="pinyin">yú</td>
+					<td class="translation">рыба</td>
+				</tr>
+				<tr>
+					<td class="chinese">羊肉</td>
+					<td class="pinyin">yángròu</td>
+					<td class="translation">баранина</td>
+				</tr>
+				<tr>
+					<td class="chinese">糖</td>
+					<td class="pinyin">táng</td>
+					<td class="translation">сахр</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Предметы -->
+		<div class="button" id="buttonStaff" onclick="getButtonID(this)">
+				<p>Предметы</p>
+		</div>
+		<table class="wordsList" id="tableStaff">
+			<tbody>
+				<tr>
+					<td class="chinese">东西</td>
+					<td class="pinyin">dōngxi</td>
+					<td class="translation">вещь, предмет</td>
+				</tr>
+				<tr>
+					<td class="chinese">钱</td>
+					<td class="pinyin">qián</td>
+					<td class="translation">деньги</td>
+				</tr>
+				<tr>
+					<td class="chinese">电视</td>
+					<td class="pinyin">diànshì</td>
+					<td class="translation">телевизор</td>
+				</tr>
+				<tr>
+					<td class="chinese">电影</td>
+					<td class="pinyin">diànyǐng</td>
+					<td class="translation">фильм, кино</td>
+				</tr>
+				<tr>
+					<td class="chinese">电脑</td>
+					<td class="pinyin">diànnǎo</td>
+					<td class="translation">компьютер</td>
+				</tr>
+				<tr>
+					<td class="chinese">电子邮件</td>
+					<td class="pinyin">diànzǐyóujiàn</td>
+					<td class="translation">e-mail</td>
+				</tr>
+				<tr>
+					<td class="chinese">手机</td>
+					<td class="pinyin">shǒujī</td>
+					<td class="translation">мобильный телефон</td>
+				</tr>
+				<tr>
+					<td class="chinese">手表</td>
+					<td class="pinyin">shǒubiǎo</td>
+					<td class="translation">наручные часы</td>
+				</tr>
+				<tr>
+					<td class="chinese">信用卡</td>
+					<td class="pinyin">xìnyòngkǎ</td>
+					<td class="translation">кредитка</td>
+				</tr>
+				<tr>
+					<td class="chinese">护照</td>
+					<td class="pinyin">hùzhào</td>
+					<td class="translation">паспорт</td>
+				</tr>
+				<tr>
+					<td class="chinese">照片</td>
+					<td class="pinyin">zhàopiàn</td>
+					<td class="translation">фотография</td>
+				</tr>
+				<tr>
+					<td class="chinese">照相机</td>
+					<td class="pinyin">zhàoxiàngjī</td>
+					<td class="translation">фотоаппарат</td>
+				</tr>
+				<tr>
+					<td class="chinese">行李箱</td>
+					<td class="pinyin">xínglǐxiàng</td>
+					<td class="translation">чемодан</td>
+				</tr>
+				<tr>
+					<td class="chinese">伞</td>
+					<td class="pinyin">sǎn</td>
+					<td class="translation">зонт</td>
+				</tr>
+				<tr>
+					<td class="chinese">灯</td>
+					<td class="pinyin">dēng</td>
+					<td class="translation">лампа; свет</td>
+				</tr>
+				<tr>
+					<td class="chinese">冰箱</td>
+					<td class="pinyin">bīngxiāng</td>
+					<td class="translation">холодильник</td>
+				</tr>
+				<tr>
+					<td class="chinese">空调</td>
+					<td class="pinyin">kōngtiáo</td>
+					<td class="translation">кондиционер</td>
+				</tr>
+				<tr>
+					<td class="chinese">桌子</td>
+					<td class="pinyin">zhuōzi</td>
+					<td class="translation">стол, парта</td>
+				</tr>
+				<tr>
+					<td class="chinese">椅子</td>
+					<td class="pinyin">yīzi</td>
+					<td class="translation">стул, кресло</td>
+				</tr>
+				<tr>
+					<td class="chinese">杯子</td>
+					<td class="pinyin">bēizi</td>
+					<td class="translation">стакан, кружка</td>
+				</tr>
+				<tr>
+					<td class="chinese">瓶子</td>
+					<td class="pinyin">píngzi</td>
+					<td class="translation">бутылка</td>
+				</tr>
+				<tr>
+					<td class="chinese">碗</td>
+					<td class="pinyin">wǎn</td>
+					<td class="translation">чашка</td>
+				</tr>
+				<tr>
+					<td class="chinese">筷子</td>
+					<td class="pinyin">kuàizi</td>
+					<td class="translation">палочки для еды</td>
+				</tr>
+				<tr>
+					<td class="chinese">盘子</td>
+					<td class="pinyin">pánzi</td>
+					<td class="translation">тарелка, блюдо</td>
+				</tr>
+				<tr>
+					<td class="chinese">药</td>
+					<td class="pinyin">yào</td>
+					<td class="translation">лекарство, медикаменты</td>
+				</tr>
+				<tr>
+					<td class="chinese">礼物</td>
+					<td class="pinyin">lǐwù</td>
+					<td class="translation">подарок, дар</td>
+				</tr>
+				<tr>
+					<td class="chinese">报纸</td>
+					<td class="pinyin">bàozhǐ</td>
+					<td class="translation">газета</td>
+				</tr>
+				<tr>
+					<td class="chinese">书</td>
+					<td class="pinyin">shù</td>
+					<td class="translation">книга</td>
+				</tr>
+				<tr>
+					<td class="chinese">词典</td>
+					<td class="pinyin">cídiǎn</td>
+					<td class="translation">словарь</td>
+				</tr>
+				<tr>
+					<td class="chinese">地图</td>
+					<td class="pinyin">dìtú</td>
+					<td class="translation">карта</td>
+				</tr>
+				<tr>
+					<td class="chinese">字</td>
+					<td class="pinyin">zì</td>
+					<td class="translation">иероглиф</td>
+				</tr>
+				<tr>
+					<td class="chinese">铅笔</td>
+					<td class="pinyin">qiānbǐ</td>
+					<td class="translation">карандаш</td>
+				</tr>
+				<tr>
+					<td class="chinese">黑板</td>
+					<td class="pinyin">hēibǎn</td>
+					<td class="translation">классная доска</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Одежда -->
+		<div class="button" id="buttonClothes" onclick="getButtonID(this)">
+				<p>Одежда</p>
+		</div>
+		<table class="wordsList" id="tableClothes">
+			<tbody>
+				<tr>
+					<td class="chinese">衣服</td>
+					<td class="pinyin">yīfu</td>
+					<td class="translation">одежда</td>
+				</tr>
+				<tr>
+					<td class="chinese">颜色</td>
+					<td class="pinyin">yánsè</td>
+					<td class="translation">цвет</td>
+				</tr>
+				<tr>
+					<td class="chinese">衬衫</td>
+					<td class="pinyin">chènshān</td>
+					<td class="translation">рубашка, блузка</td>
+				</tr>
+				<tr>
+					<td class="chinese">裤子</td>
+					<td class="pinyin">kùzi</td>
+					<td class="translation">брюки</td>
+				</tr>
+				<tr>
+					<td class="chinese">裙子</td>
+					<td class="pinyin">qúnzi</td>
+					<td class="translation">юбка</td>
+				</tr>
+				<tr>
+					<td class="chinese">帽子</td>
+					<td class="pinyin">màozi</td>
+					<td class="translation">шляпа, шапка, кепка</td>
+				</tr>
+				<tr>
+					<td class="chinese">皮鞋</td>
+					<td class="pinyin">píxié</td>
+					<td class="translation">кожанная обувь</td>
+				</tr>
+				<tr>
+					<td class="chinese">包</td>
+					<td class="pinyin">bāo</td>
+					<td class="translation">сумка, пакет</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Транспорт -->
+		<div class="button" id="buttonCars" onclick="getButtonID(this)">
+				<p>Транспорт</p>
+		</div>
+		<table class="wordsList" id="tableCars">
+			<tbody>
+				<tr>
+					<td class="chinese">票</td>
+					<td class="pinyin">piào</td>
+					<td class="translation">билет</td>
+				</tr>
+				<tr>
+					<td class="chinese">飞机</td>
+					<td class="pinyin">fēijī</td>
+					<td class="translation">самолёт</td>
+				</tr>
+				<tr>
+					<td class="chinese">船</td>
+					<td class="pinyin">chuán</td>
+					<td class="translation">лодка, корабль</td>
+				</tr>
+				<tr>
+					<td class="chinese">公共汽车</td>
+					<td class="pinyin">gōnggòngqìchē</td>
+					<td class="translation">общественный автобус</td>
+				</tr>
+				<tr>
+					<td class="chinese">出租车</td>
+					<td class="pinyin">chūzūchē</td>
+					<td class="translation">такси</td>
+				</tr>
+				<tr>
+					<td class="chinese">自行车</td>
+					<td class="pinyin">zìxíngchē</td>
+					<td class="translation">велосипед</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Места -->
+		<div class="button" id="buttonPlases" onclick="getButtonID(this)">
+				<p>Места</p>
+		</div>
+		<table class="wordsList" id="tablePlases">
+			<tbody>
+				<tr>
+					<td class="chinese">地方</td>
+					<td class="pinyin">dìfāng</td>
+					<td class="translation">место</td>
+				</tr>
+				<tr>
+					<td class="chinese">家</td>
+					<td class="pinyin">jiā</td>
+					<td class="translation">дом; семья</td>
+				</tr>
+				<tr>
+					<td class="chinese">中国</td>
+					<td class="pinyin">zhōngguō</td>
+					<td class="translation">Китай</td>
+				</tr>
+				<tr>
+					<td class="chinese">城市</td>
+					<td class="pinyin">chéngshì</td>
+					<td class="translation">город</td>
+				</tr>
+				<tr>
+					<td class="chinese">北京</td>
+					<td class="pinyin">běijīng</td>
+					<td class="translation">Пикин</td>
+				</tr>
+				<tr>
+					<td class="chinese">国家</td>
+					<td class="pinyin">guójiā</td>
+					<td class="translation">страна; нация</td>
+				</tr>
+				<tr>
+					<td class="chinese">公园</td>
+					<td class="pinyin">gōngyuán</td>
+					<td class="translation">парк</td>
+				</tr>
+				<tr>
+					<td class="chinese">河</td>
+					<td class="pinyin">hé</td>
+					<td class="translation">река</td>
+				</tr>
+				<tr>
+					<td class="chinese">街道</td>
+					<td class="pinyin">jiēdào</td>
+					<td class="translation">улица</td>
+				</tr>
+				<tr>
+					<td class="chinese">火车站</td>
+					<td class="pinyin">huǒchēzhan</td>
+					<td class="translation">вокзал</td>
+				</tr>
+				<tr>
+					<td class="chinese">机场</td>
+					<td class="pinyin">jīchǎng</td>
+					<td class="translation">аэропорт</td>
+				</tr>
+				<tr>
+					<td class="chinese">地铁</td>
+					<td class="pinyin">dìtiě</td>
+					<td class="translation">метро</td>
+				</tr>
+				<tr>
+					<td class="chinese">电梯</td>
+					<td class="pinyin">diàntī</td>
+					<td class="translation">лифт, эскалатор</td>
+				</tr>
+				<tr>
+					<td class="chinese">楼</td>
+					<td class="pinyin">lóu</td>
+					<td class="translation">высотное здание; этаж</td>
+				</tr>
+				<tr>
+					<td class="chinese">路</td>
+					<td class="pinyin">lù</td>
+					<td class="translation">дорога</td>
+				</tr>
+				<tr>
+					<td class="chinese">医院</td>
+					<td class="pinyin">yīyuàn</td>
+					<td class="translation">больница</td>
+				</tr>
+				<tr>
+					<td class="chinese">银行</td>
+					<td class="pinyin">yīnhán</td>
+					<td class="translation">банк</td>
+				</tr>
+				<tr>
+					<td class="chinese">宾馆</td>
+					<td class="pinyin">bīnguǎn</td>
+					<td class="translation">отель</td>
+				</tr>
+				<tr>
+					<td class="chinese">饭店</td>
+					<td class="pinyin">fàndiàn</td>
+					<td class="translation">отель, ресторан</td>
+				</tr>
+				<tr>
+					<td class="chinese">商店</td>
+					<td class="pinyin">shāndiàn</td>
+					<td class="translation">магазин</td>
+				</tr>
+				<tr>
+					<td class="chinese">超市</td>
+					<td class="pinyin">chāoshiì</td>
+					<td class="translation">супермаркет</td>
+				</tr>
+				<tr>
+					<td class="chinese">图书馆</td>
+					<td class="pinyin">túshūguǎn</td>
+					<td class="translation">библиотека</td>
+				</tr>
+				<tr>
+					<td class="chinese">公司</td>
+					<td class="pinyin">gōngsì</td>
+					<td class="translation">компания, фирма</td>
+				</tr>
+				<tr>
+					<td class="chinese">学校</td>
+					<td class="pinyin">xuéxiào</td>
+					<td class="translation">школа</td>
+				</tr>
+				<tr>
+					<td class="chinese">教室</td>
+					<td class="pinyin">jiàoshì</td>
+					<td class="translation">класс, аудитория</td>
+				</tr>
+				<tr>
+					<td class="chinese">房间</td>
+					<td class="pinyin">fángjiān</td>
+					<td class="translation">комната</td>
+				</tr>
+				<tr>
+					<td class="chinese">门</td>
+					<td class="pinyin">mén</td>
+					<td class="translation">дверь</td>
+				</tr>
+				<tr>
+					<td class="chinese">办公室</td>
+					<td class="pinyin">bànggōnshì</td>
+					<td class="translation">офис, концелярия</td>
+				</tr>
+				<tr>
+					<td class="chinese">洗手间</td>
+					<td class="pinyin">xǐshǒujiān</td>
+					<td class="translation">туалет</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Общие слова -->
+		<div class="button" id="buttonRegularWords" onclick="getButtonID(this)">
+				<p>Общие слова</p>
+		</div>
+		<table class="wordsList" id="tableRegularWords">
+			<tbody>
+				<tr>
+					<td class="chinese">课</td>
+					<td class="pinyin">kè</td>
+					<td class="translation">урок</td>
+				</tr>
+				<tr>
+					<td class="chinese">考试</td>
+					<td class="pinyin">kǎoshì</td>
+					<td class="translation">экзамен</td>
+				</tr>
+				<tr>
+					<td class="chinese">问题</td>
+					<td class="pinyin">wèntí</td>
+					<td class="translation">вопрос, проблема</td>
+				</tr>
+				<tr>
+					<td class="chinese">题</td>
+					<td class="pinyin">tí</td>
+					<td class="translation">тема, вопрос; домашнее задание</td>
+				</tr>
+				<tr>
+					<td class="chinese">意思</td>
+					<td class="pinyin">yìsi</td>
+					<td class="translation">смысл, значение</td>
+				</tr>
+				<tr>
+					<td class="chinese">事情</td>
+					<td class="pinyin">shìqing</td>
+					<td class="translation">дело, событие</td>
+				</tr>
+				<tr>
+					<td class="chinese">生日</td>
+					<td class="pinyin">shēngrì</td>
+					<td class="translation">день рождения</td>
+				</tr>
+				<tr>
+					<td class="chinese">句子</td>
+					<td class="pinyin">jùzi</td>
+					<td class="translation">фраза, предложение</td>
+				</tr>
+				<tr>
+					<td class="chinese">汉语</td>
+					<td class="pinyin">hànyǔ</td>
+					<td class="translation">китайский язык</td>
+				</tr>
+				<tr>
+					<td class="chinese">中文</td>
+					<td class="pinyin">zhōngwén</td>
+					<td class="translation">китайский язык</td>
+				</tr>
+				<tr>
+					<td class="chinese">数学</td>
+					<td class="pinyin">shùxué</td>
+					<td class="translation">математика</td>
+				</tr>
+				<tr>
+					<td class="chinese">班</td>
+					<td class="pinyin">bān</td>
+					<td class="translation">класс, группа, команда</td>
+				</tr>
+				<tr>
+					<td class="chinese">年级</td>
+					<td class="pinyin">niánjí</td>
+					<td class="translation">возраст</td>
+				</tr>
+				<tr>
+					<td class="chinese">作业</td>
+					<td class="pinyin">zuòyè</td>
+					<td class="translation">домашнее задание, домашняя работа</td>
+				</tr>
+				<tr>
+					<td class="chinese">成绩</td>
+					<td class="pinyin">chéngjì</td>
+					<td class="translation">оценка, отметка, результат</td>
+				</tr>
+				<tr>
+					<td class="chinese">水平</td>
+					<td class="pinyin">shuǐpíng</td>
+					<td class="translation">уровень</td>
+				</tr>
+				<tr>
+					<td class="chinese">兴趣</td>
+					<td class="pinyin">xìngqù</td>
+					<td class="translation">интерес</td>
+				</tr>
+				<tr>
+					<td class="chinese">爱好</td>
+					<td class="pinyin">àihào</td>
+					<td class="translation">хобби</td>
+				</tr>
+				<tr>
+					<td class="chinese">音乐</td>
+					<td class="pinyin">yīnyuè</td>
+					<td class="translation">музыка</td>
+				</tr>
+				<tr>
+					<td class="chinese">体育</td>
+					<td class="pinyin">tǐyù</td>
+					<td class="translation">физкультура, спорт</td>
+				</tr>
+				<tr>
+					<td class="chinese">办法</td>
+					<td class="pinyin">bànfǎ</td>
+					<td class="translation">способ, метод, решение</td>
+				</tr>
+				<tr>
+					<td class="chinese">习惯</td>
+					<td class="pinyin">xíguàn</td>
+					<td class="translation">привычка, обычай</td>
+				</tr>
+				<tr>
+					<td class="chinese">比赛</td>
+					<td class="pinyin">bǐsài</td>
+					<td class="translation">соревнование, матч</td>
+				</tr>
+				<tr>
+					<td class="chinese">游戏</td>
+					<td class="pinyin">yóuxì</td>
+					<td class="translation">игра</td>
+				</tr>
+				<tr>
+					<td class="chinese">故事</td>
+					<td class="pinyin">gùshi</td>
+					<td class="translation">история, рассказ</td>
+				</tr>
+				<tr>
+					<td class="chinese">关系</td>
+					<td class="pinyin">guānxì</td>
+					<td class="translation">отношение, связь</td>
+				</tr>
+				<tr>
+					<td class="chinese">环境</td>
+					<td class="pinyin">huánjìng</td>
+					<td class="translation">окружающая среда</td>
+				</tr>
+				<tr>
+					<td class="chinese">会议</td>
+					<td class="pinyin">huìyì</td>
+					<td class="translation">встреча, конференция</td>
+				</tr>
+				<tr>
+					<td class="chinese">机会</td>
+					<td class="pinyin">jīhuì</td>
+					<td class="translation">возможность, шанс</td>
+				</tr>
+				<tr>
+					<td class="chinese">节目</td>
+					<td class="pinyin">jiémù</td>
+					<td class="translation">программа, представление</td>
+				</tr>
+				<tr>
+					<td class="chinese">世界</td>
+					<td class="pinyin">shìjiè</td>
+					<td class="translation">мир, свет</td>
+				</tr>
+				<tr>
+					<td class="chinese">历史</td>
+					<td class="pinyin">lìshǐ</td>
+					<td class="translation">история</td>
+				</tr>
+				<tr>
+					<td class="chinese">文化</td>
+					<td class="pinyin">wénhuà</td>
+					<td class="translation">культура</td>
+				</tr>
+				<tr>
+					<td class="chinese">新闻</td>
+					<td class="pinyin">xīnwén</td>
+					<td class="translation">новости</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Время -->
+		<div class="button" id="buttonTime" onclick="getButtonID(this)">
+				<p>Время</p>
+		</div>
+		<table class="wordsList" id="tableTime">
+			<tbody>
+				<tr>
+					<td class="chinese">现在</td>
+					<td class="pinyin">xiànzài</td>
+					<td class="translation">сейчас</td>
+				</tr>
+				<tr>
+					<td class="chinese">今天</td>
+					<td class="pinyin">jīntiān</td>
+					<td class="translation">сегодня</td>
+				</tr>
+				<tr>
+					<td class="chinese">明天</td>
+					<td class="pinyin">míngtiān</td>
+					<td class="translation">завтра</td>
+				</tr>
+				<tr>
+					<td class="chinese">昨天</td>
+					<td class="pinyin">zuótiān</td>
+					<td class="translation">вчера</td>
+				</tr>
+				<tr>
+					<td class="chinese">上午</td>
+					<td class="pinyin">shàngwǔ</td>
+					<td class="translation">утро</td>
+				</tr>
+				<tr>
+					<td class="chinese">中午</td>
+					<td class="pinyin">zhōngwǔ</td>
+					<td class="translation">полдень</td>
+				</tr>
+				<tr>
+					<td class="chinese">下午</td>
+					<td class="pinyin">xiàwǔ</td>
+					<td class="translation">вечер</td>
+				</tr>
+				<tr>
+					<td class="chinese">年</td>
+					<td class="pinyin">nián</td>
+					<td class="translation">год</td>
+				</tr>
+				<tr>
+					<td class="chinese">月</td>
+					<td class="pinyin">yuè</td>
+					<td class="translation">месяц</td>
+				</tr>
+				<tr>
+					<td class="chinese">日</td>
+					<td class="pinyin">rì</td>
+					<td class="translation">день</td>
+				</tr>
+				<tr>
+					<td class="chinese">星期</td>
+					<td class="pinyin">xīngqī</td>
+					<td class="translation">неделя</td>
+				</tr>
+				<tr>
+					<td class="chinese">点</td>
+					<td class="pinyin">diǎn</td>
+					<td class="translation">час</td>
+				</tr>
+				<tr>
+					<td class="chinese">分钟</td>
+					<td class="pinyin">fēnzhōng</td>
+					<td class="translation">минута</td>
+				</tr>
+				<tr>
+					<td class="chinese">时候</td>
+					<td class="pinyin">shíhou</td>
+					<td class="translation">период времени, момент</td>
+				</tr>
+				<tr>
+					<td class="chinese">早上</td>
+					<td class="pinyin">zǎoshàng</td>
+					<td class="translation">раннее утро</td>
+				</tr>
+				<tr>
+					<td class="chinese">晚上</td>
+					<td class="pinyin">wǎnshàng</td>
+					<td class="translation">вечер, ночь</td>
+				</tr>
+				<tr>
+					<td class="chinese">小时</td>
+					<td class="pinyin">xiǎoshí</td>
+					<td class="translation">час</td>
+				</tr>
+				<tr>
+					<td class="chinese">号</td>
+					<td class="pinyin">hào</td>
+					<td class="translation">число</td>
+				</tr>
+				<tr>
+					<td class="chinese">时间</td>
+					<td class="pinyin">shíjiān</td>
+					<td class="translation">время</td>
+				</tr>
+				<tr>
+					<td class="chinese">去年</td>
+					<td class="pinyin">qùnián</td>
+					<td class="translation">прошлый год</td>
+				</tr>
+				<tr>
+					<td class="chinese">刚才</td>
+					<td class="pinyin">gāngcái</td>
+					<td class="translation">сейчас, только что</td>
+				</tr>
+				<tr>
+					<td class="chinese">一会儿</td>
+					<td class="pinyin">yíhuìr</td>
+					<td class="translation">немного, какоето время</td>
+				</tr>
+				<tr>
+					<td class="chinese">以前</td>
+					<td class="pinyin">yǐqián</td>
+					<td class="translation">раньше, прежде</td>
+				</tr>
+				<tr>
+					<td class="chinese">后来</td>
+					<td class="pinyin">hoùlái</td>
+					<td class="translation">потом, затем</td>
+				</tr>
+				<tr>
+					<td class="chinese">最近</td>
+					<td class="pinyin">zuìjìn</td>
+					<td class="translation">недавно</td>
+				</tr>
+				<tr>
+					<td class="chinese">过去</td>
+					<td class="pinyin">guòqù</td>
+					<td class="translation">прошлое</td>
+				</tr>
+				<tr>
+					<td class="chinese">季节</td>
+					<td class="pinyin">jìjié</td>
+					<td class="translation">сезон, время года</td>
+				</tr>
+				<tr>
+					<td class="chinese">春</td>
+					<td class="pinyin">chūn</td>
+					<td class="translation">весна</td>
+				</tr>
+				<tr>
+					<td class="chinese">夏</td>
+					<td class="pinyin">xià</td>
+					<td class="translation">лето</td>
+				</tr>
+				<tr>
+					<td class="chinese">秋</td>
+					<td class="pinyin">qiú</td>
+					<td class="translation">осень</td>
+				</tr>
+				<tr>
+					<td class="chinese">冬</td>
+					<td class="pinyin">dōng</td>
+					<td class="translation">зима</td>
+				</tr>
+				<tr>
+					<td class="chinese">节日</td>
+					<td class="pinyin">jiérì</td>
+					<td class="translation">праздник, фестиваль</td>
+				</tr>
+				<tr>
+					<td class="chinese">周末</td>
+					<td class="pinyin">zhōumò</td>
+					<td class="translation">конец недели, выходной</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Местоположение -->
+		<div class="button" id="buttonLocation" onclick="getButtonID(this)">
+				<p>Местоположение</p>
+		</div>
+		<table class="wordsList" id="tableLocation">
+			<tbody>
+				<tr>
+					<td class="chinese">上</td>
+					<td class="pinyin">shàng</td>
+					<td class="translation">на</td>
+				</tr>
+				<tr>
+					<td class="chinese">下</td>
+					<td class="pinyin">xià</td>
+					<td class="translation">под</td>
+				</tr>
+				<tr>
+					<td class="chinese">前面</td>
+					<td class="pinyin">qiánmiàn</td>
+					<td class="translation">перед</td>
+				</tr>
+				<tr>
+					<td class="chinese">后面</td>
+					<td class="pinyin">hòumiàn</td>
+					<td class="translation">позади</td>
+				</tr>
+				<tr>
+					<td class="chinese">里</td>
+					<td class="pinyin">lǐ</td>
+					<td class="translation">в</td>
+				</tr>
+				<tr>
+					<td class="chinese">左边</td>
+					<td class="pinyin">zuǒbiān</td>
+					<td class="translation">слева</td>
+				</tr>
+				<tr>
+					<td class="chinese">右边</td>
+					<td class="pinyin">yòubiān</td>
+					<td class="translation">справа</td>
+				</tr>
+				<tr>
+					<td class="chinese">旁边</td>
+					<td class="pinyin">pángbiān</td>
+					<td class="translation">рядом, сбоку, около</td>
+				</tr>
+				<tr>
+					<td class="chinese">外</td>
+					<td class="pinyin">wài</td>
+					<td class="translation">снаружи</td>
+				</tr>
+				<tr>
+					<td class="chinese">中间</td>
+					<td class="pinyin">zhōngjiān</td>
+					<td class="translation">внутри</td>
+				</tr>
+				<tr>
+					<td class="chinese">附近</td>
+					<td class="pinyin">fùjìn</td>
+					<td class="translation">рядом</td>
+				</tr>
+				<tr>
+					<td class="chinese">东</td>
+					<td class="pinyin">dōng</td>
+					<td class="translation">восток</td>
+				</tr>
+				<tr>
+					<td class="chinese">南</td>
+					<td class="pinyin">nán</td>
+					<td class="translation">юг</td>
+				</tr>
+				<tr>
+					<td class="chinese">西</td>
+					<td class="pinyin">xī</td>
+					<td class="translation">запад</td>
+				</tr>
+				<tr>
+					<td class="chinese">北方</td>
+					<td class="pinyin">běifāng</td>
+					<td class="translation">север</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Местоимения -->
+		<div class="button" id="buttonPronouns" onclick="getButtonID(this)">
+				<p>Местоимения</p>
+		</div>
+		<table class="wordsList" id="tablePronouns">
+			<tbody>
+				<tr>
+					<td class="chinese">我</td>
+					<td class="pinyin">wǒ</td>
+					<td class="translation">я</td>
+				</tr>
+				<tr>
+					<td class="chinese">我们</td>
+					<td class="pinyin">wǒmen</td>
+					<td class="translation">мы</td>
+				</tr>
+				<tr>
+					<td class="chinese">你</td>
+					<td class="pinyin">nǐ</td>
+					<td class="translation">ты</td>
+				</tr>
+				<tr>
+					<td class="chinese">你们</td>
+					<td class="pinyin">nǐmen</td>
+					<td class="translation">вы</td>
+				</tr>
+				<tr>
+					<td class="chinese">您</td>
+					<td class="pinyin">nín</td>
+					<td class="translation">Вы</td>
+				</tr>
+				<tr>
+					<td class="chinese">他</td>
+					<td class="pinyin">tā</td>
+					<td class="translation">он</td>
+				</tr>
+				<tr>
+					<td class="chinese">她</td>
+					<td class="pinyin">tā</td>
+					<td class="translation">она</td>
+				</tr>
+				<tr>
+					<td class="chinese">它</td>
+					<td class="pinyin">tā</td>
+					<td class="translation">это, оно</td>
+				</tr>
+				<tr>
+					<td class="chinese">大家</td>
+					<td class="pinyin">dàjiā</td>
+					<td class="translation">все</td>
+				</tr>
+				<tr>
+					<td class="chinese">这</td>
+					<td class="pinyin">zhè</td>
+					<td class="translation">это</td>
+				</tr>
+				<tr>
+					<td class="chinese">那</td>
+					<td class="pinyin">nà</td>
+					<td class="translation">то</td>
+				</tr>
+				<tr>
+					<td class="chinese">这儿</td>
+					<td class="pinyin">zhèr</td>
+					<td class="translation">здесь</td>
+				</tr>
+				<tr>
+					<td class="chinese">那儿</td>
+					<td class="pinyin">nàr</td>
+					<td class="translation">там</td>
+				</tr>
+				<tr>
+					<td class="chinese">哪</td>
+					<td class="pinyin">nǎ</td>
+					<td class="translation">который</td>
+				</tr>
+				<tr>
+					<td class="chinese">哪儿</td>
+					<td class="pinyin">nǎr</td>
+					<td class="translation">где</td>
+				</tr>
+				<tr>
+					<td class="chinese">谁</td>
+					<td class="pinyin">shéi</td>
+					<td class="translation">кто</td>
+				</tr>
+				<tr>
+					<td class="chinese">什么</td>
+					<td class="pinyin">shénme</td>
+					<td class="translation">что</td>
+				</tr>
+				<tr>
+					<td class="chinese">多少</td>
+					<td class="pinyin">duōshao</td>
+					<td class="translation">сколько (до 10)</td>
+				</tr>
+				<tr>
+					<td class="chinese">几</td>
+					<td class="pinyin">jǐ</td>
+					<td class="translation">сколько (после 10)</td>
+				</tr>
+				<tr>
+					<td class="chinese">怎么</td>
+					<td class="pinyin">zěnme</td>
+					<td class="translation">как</td>
+				</tr>
+				<tr>
+					<td class="chinese">怎么样</td>
+					<td class="pinyin">zěnmeyàng</td>
+					<td class="translation">как</td>
+				</tr>
+				<tr>
+					<td class="chinese">为什么</td>
+					<td class="pinyin">wèishénme</td>
+					<td class="translation">почему</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Числительные -->
+		<div class="button" id="buttonNumbers" onclick="getButtonID(this)">
+				<p>Числительные</p>
+		</div>
+		<table class="wordsList" id="tableNumbers">
+			<tbody>
+				<tr>
+					<td class="chinese">零</td>
+					<td class="pinyin">líng</td>
+					<td class="translation">ноль</td>
+				</tr>
+				<tr>
+					<td class="chinese">一</td>
+					<td class="pinyin">yī</td>
+					<td class="translation">один</td>
+				</tr>
+				<tr>
+					<td class="chinese">二</td>
+					<td class="pinyin">èr</td>
+					<td class="translation">два</td>
+				</tr>
+				<tr>
+					<td class="chinese">三</td>
+					<td class="pinyin">sān</td>
+					<td class="translation">три</td>
+				</tr>
+				<tr>
+					<td class="chinese">四</td>
+					<td class="pinyin">sì</td>
+					<td class="translation">четыре</td>
+				</tr>
+				<tr>
+					<td class="chinese">五</td>
+					<td class="pinyin">wǔ</td>
+					<td class="translation">пять</td>
+				</tr>
+				<tr>
+					<td class="chinese">六</td>
+					<td class="pinyin">liù</td>
+					<td class="translation">шесть</td>
+				</tr>
+				<tr>
+					<td class="chinese">七</td>
+					<td class="pinyin">qī</td>
+					<td class="translation">семь</td>
+				</tr>
+				<tr>
+					<td class="chinese">八</td>
+					<td class="pinyin">bā</td>
+					<td class="translation">восемь</td>
+				</tr>
+				<tr>
+					<td class="chinese">九</td>
+					<td class="pinyin">jiǔ</td>
+					<td class="translation">девять</td>
+				</tr>
+				<tr>
+					<td class="chinese">十</td>
+					<td class="pinyin">shí</td>
+					<td class="translation">десять</td>
+				</tr>
+				<tr>
+					<td class="chinese">两</td>
+					<td class="pinyin">liǎng</td>
+					<td class="translation">пара</td>
+				</tr>
+				<tr>
+					<td class="chinese">百</td>
+					<td class="pinyin">bǎi</td>
+					<td class="translation">сто</td>
+				</tr>
+				<tr>
+					<td class="chinese">千</td>
+					<td class="pinyin">qiān</td>
+					<td class="translation">тысяча</td>
+				</tr>
+				<tr>
+					<td class="chinese">第一</td>
+					<td class="pinyin">dìyí</td>
+					<td class="translation">первый</td>
+				</tr>
+				<tr>
+					<td class="chinese">万</td>
+					<td class="pinyin">wàn</td>
+					<td class="translation">десять тысяч</td>
+				</tr>
+				<tr>
+					<td class="chinese">半</td>
+					<td class="pinyin">bàn</td>
+					<td class="translation">половина</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Глаголы -->
+		<div class="button" id="buttonVerbs" onclick="getButtonID(this)">
+				<p>Глаголы</p>
+		</div>
+		<table class="wordsList" id="tableVerbs">
+			<tbody>
+				<tr>
+					<td class="chinese">做</td>
+					<td class="pinyin">zuò</td>
+					<td class="translation">делать</td>
+				</tr>
+				<tr>
+					<td class="chinese">是</td>
+					<td class="pinyin">shì</td>
+					<td class="translation">быть</td>
+				</tr>
+				<tr>
+					<td class="chinese">有</td>
+					<td class="pinyin">yǒu</td>
+					<td class="translation">иметь</td>
+				</tr>
+				<tr>
+					<td class="chinese">住</td>
+					<td class="pinyin">zhù</td>
+					<td class="translation">жить в</td>
+				</tr>
+				<tr>
+					<td class="chinese">来</td>
+					<td class="pinyin">lái</td>
+					<td class="translation">приходить</td>
+				</tr>
+				<tr>
+					<td class="chinese">去</td>
+					<td class="pinyin">qù</td>
+					<td class="translation">идти</td>
+				</tr>
+				<tr>
+					<td class="chinese">回</td>
+					<td class="pinyin">huí</td>
+					<td class="translation">возвращаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">想</td>
+					<td class="pinyin">xiǎng</td>
+					<td class="translation">думать, желать</td>
+				</tr>
+				<tr>
+					<td class="chinese">吃</td>
+					<td class="pinyin">chī</td>
+					<td class="translation">есть</td>
+				</tr>
+				<tr>
+					<td class="chinese">喝</td>
+					<td class="pinyin">hē</td>
+					<td class="translation">пить</td>
+				</tr>
+				<tr>
+					<td class="chinese">说话</td>
+					<td class="pinyin">shuōhuà</td>
+					<td class="translation">говорить</td>
+				</tr>
+				<tr>
+					<td class="chinese">读</td>
+					<td class="pinyin">dú</td>
+					<td class="translation">читать</td>
+				</tr>
+				<tr>
+					<td class="chinese">写</td>
+					<td class="pinyin">xiě</td>
+					<td class="translation">писать</td>
+				</tr>
+				<tr>
+					<td class="chinese">看</td>
+					<td class="pinyin">kàn</td>
+					<td class="translation">смотреть, видеть, наблюдать</td>
+				</tr>
+				<tr>
+					<td class="chinese">看见</td>
+					<td class="pinyin">kànjiàn</td>
+					<td class="translation">видеть, увидеть</td>
+				</tr>
+				<tr>
+					<td class="chinese">听</td>
+					<td class="pinyin">tīng</td>
+					<td class="translation">слушать</td>
+				</tr>
+				<tr>
+					<td class="chinese">叫</td>
+					<td class="pinyin">jiào</td>
+					<td class="translation">звать, называть</td>
+				</tr>
+				<tr>
+					<td class="chinese">买</td>
+					<td class="pinyin">mǎi</td>
+					<td class="translation">покупать</td>
+				</tr>
+				<tr>
+					<td class="chinese">开</td>
+					<td class="pinyin">kāi</td>
+					<td class="translation">открывать, включать</td>
+				</tr>
+				<tr>
+					<td class="chinese">坐</td>
+					<td class="pinyin">zuò</td>
+					<td class="translation">сидеть</td>
+				</tr>
+				<tr>
+					<td class="chinese">打电话</td>
+					<td class="pinyin">dádiànhuà</td>
+					<td class="translation">звонить по телефону</td>
+				</tr>
+				<tr>
+					<td class="chinese">认识</td>
+					<td class="pinyin">rènshi</td>
+					<td class="translation">узнавать, знать</td>
+				</tr>
+				<tr>
+					<td class="chinese">学习</td>
+					<td class="pinyin">xuéxi</td>
+					<td class="translation">учиться, учить</td>
+				</tr>
+				<tr>
+					<td class="chinese">工作</td>
+					<td class="pinyin">gōngzuo</td>
+					<td class="translation">работать</td>
+				</tr>
+				<tr>
+					<td class="chinese">睡觉</td>
+					<td class="pinyin">shuìjiào</td>
+					<td class="translation">спать</td>
+				</tr>
+				<tr>
+					<td class="chinese">喜欢</td>
+					<td class="pinyin">xǐhuan</td>
+					<td class="translation">нравиться</td>
+				</tr>
+				<tr>
+					<td class="chinese">爱</td>
+					<td class="pinyin">ài</td>
+					<td class="translation">любить</td>
+				</tr>
+				<tr>
+					<td class="chinese">会</td>
+					<td class="pinyin">huì</td>
+					<td class="translation">мочь, уметь</td>
+				</tr>
+				<tr>
+					<td class="chinese">能</td>
+					<td class="pinyin">néng</td>
+					<td class="translation">мочь, быть в состоянии</td>
+				</tr>
+				<tr>
+					<td class="chinese">下雨</td>
+					<td class="pinyin">xiàyǔ</td>
+					<td class="translation">идти (о дожде)</td>
+				</tr>
+				<tr>
+					<td class="chinese">请</td>
+					<td class="pinyin">qǐng</td>
+					<td class="translation">просить</td>
+				</tr>
+				<tr>
+					<td class="chinese">进</td>
+					<td class="pinyin">jìn</td>
+					<td class="translation">входить</td>
+				</tr>
+				<tr>
+					<td class="chinese">出</td>
+					<td class="pinyin">chū</td>
+					<td class="translation">выходить</td>
+				</tr>
+				<tr>
+					<td class="chinese">到</td>
+					<td class="pinyin">dào</td>
+					<td class="translation">прибывать, добираться</td>
+				</tr>
+				<tr>
+					<td class="chinese">要</td>
+					<td class="pinyin">yào</td>
+					<td class="translation">хотеть</td>
+				</tr>
+				<tr>
+					<td class="chinese">告诉</td>
+					<td class="pinyin">gàosù</td>
+					<td class="translation">сказать, дать знать</td>
+				</tr>
+				<tr>
+					<td class="chinese">问</td>
+					<td class="pinyin">wèn</td>
+					<td class="translation">спрашивать</td>
+				</tr>
+				<tr>
+					<td class="chinese">回答</td>
+					<td class="pinyin">huída</td>
+					<td class="translation">отвечать</td>
+				</tr>
+				<tr>
+					<td class="chinese">笑</td>
+					<td class="pinyin">xiào</td>
+					<td class="translation">смеяться, улыбаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">给</td>
+					<td class="pinyin">gěi</td>
+					<td class="translation">давать</td>
+				</tr>
+				<tr>
+					<td class="chinese">送</td>
+					<td class="pinyin">sòng</td>
+					<td class="translation">отправлять, доставлять, сопровождать</td>
+				</tr>
+				<tr>
+					<td class="chinese">卖</td>
+					<td class="pinyin">mài</td>
+					<td class="translation">продавать</td>
+				</tr>
+				<tr>
+					<td class="chinese">穿</td>
+					<td class="pinyin">chuān</td>
+					<td class="translation">надевать, носить (одежду)</td>
+				</tr>
+				<tr>
+					<td class="chinese">等</td>
+					<td class="pinyin">děng</td>
+					<td class="translation">ждать</td>
+				</tr>
+				<tr>
+					<td class="chinese">介绍</td>
+					<td class="pinyin">jièshào</td>
+					<td class="translation">представлять, знакомить</td>
+				</tr>
+				<tr>
+					<td class="chinese">知道</td>
+					<td class="pinyin">zhīdao</td>
+					<td class="translation">знать</td>
+				</tr>
+				<tr>
+					<td class="chinese">觉得</td>
+					<td class="pinyin">juéde</td>
+					<td class="translation">чувствовать, осознавать, думать</td>
+				</tr>
+				<tr>
+					<td class="chinese">懂</td>
+					<td class="pinyin">dǒng</td>
+					<td class="translation">понимать, знать</td>
+				</tr>
+				<tr>
+					<td class="chinese">找</td>
+					<td class="pinyin">zhǎo</td>
+					<td class="translation">искать</td>
+				</tr>
+				<tr>
+					<td class="chinese">让</td>
+					<td class="pinyin">ràng</td>
+					<td class="translation">разрешать, позволять</td>
+				</tr>
+				<tr>
+					<td class="chinese">希望</td>
+					<td class="pinyin">xīwàng</td>
+					<td class="translation">надеяться</td>
+				</tr>
+				<tr>
+					<td class="chinese">帮助</td>
+					<td class="pinyin">bāngzhù</td>
+					<td class="translation">помогать</td>
+				</tr>
+				<tr>
+					<td class="chinese">玩</td>
+					<td class="pinyin">wán</td>
+					<td class="translation">играть, развлекаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">上班</td>
+					<td class="pinyin">shàngbān</td>
+					<td class="translation">ходить на работу</td>
+				</tr>
+				<tr>
+					<td class="chinese">起床</td>
+					<td class="pinyin">qǐchuáng</td>
+					<td class="translation">вставать, подниматься</td>
+				</tr>
+				<tr>
+					<td class="chinese">唱歌</td>
+					<td class="pinyin">chànggē</td>
+					<td class="translation">петь</td>
+				</tr>
+				<tr>
+					<td class="chinese">跳舞</td>
+					<td class="pinyin">tiàowǔ</td>
+					<td class="translation">танцевать</td>
+				</tr>
+				<tr>
+					<td class="chinese">旅游</td>
+					<td class="pinyin">lǚyóu</td>
+					<td class="translation">путешествовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">运动</td>
+					<td class="pinyin">yùndòng</td>
+					<td class="translation">заниматься спортом</td>
+				</tr>
+				<tr>
+					<td class="chinese">走</td>
+					<td class="pinyin">zǒu</td>
+					<td class="translation">ходить</td>
+				</tr>
+				<tr>
+					<td class="chinese">跑步</td>
+					<td class="pinyin">pǎobù</td>
+					<td class="translation">бегать</td>
+				</tr>
+				<tr>
+					<td class="chinese">游泳</td>
+					<td class="pinyin">yóuyǒng</td>
+					<td class="translation">плавать</td>
+				</tr>
+				<tr>
+					<td class="chinese">踢足球</td>
+					<td class="pinyin">tīzūqiú</td>
+					<td class="translation">играть в футбол</td>
+				</tr>
+				<tr>
+					<td class="chinese">打篮球</td>
+					<td class="pinyin">dǎlánqiǔ</td>
+					<td class="translation">играть в баскетбол</td>
+				</tr>
+				<tr>
+					<td class="chinese">休息</td>
+					<td class="pinyin">xiūxi</td>
+					<td class="translation">отдыхать</td>
+				</tr>
+				<tr>
+					<td class="chinese">生病</td>
+					<td class="pinyin">shéngbìng</td>
+					<td class="translation">заболеть</td>
+				</tr>
+				<tr>
+					<td class="chinese">洗</td>
+					<td class="pinyin">xǐ</td>
+					<td class="translation">мыть</td>
+				</tr>
+				<tr>
+					<td class="chinese">开始</td>
+					<td class="pinyin">kāishǐ</td>
+					<td class="translation">начинать</td>
+				</tr>
+				<tr>
+					<td class="chinese">完</td>
+					<td class="pinyin">wán</td>
+					<td class="translation">заканчивать</td>
+				</tr>
+				<tr>
+					<td class="chinese">准备</td>
+					<td class="pinyin">zhǔnbèi</td>
+					<td class="translation">готовить(ся), приготовить(ся)</td>
+				</tr>
+				<tr>
+					<td class="chinese">欢迎</td>
+					<td class="pinyin">huānyíng</td>
+					<td class="translation">приветствовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">可以</td>
+					<td class="pinyin">kěyǐ</td>
+					<td class="translation">можно, возможно</td>
+				</tr>
+				<tr>
+					<td class="chinese">讲</td>
+					<td class="pinyin">jiǎng</td>
+					<td class="translation">говорить, рассказывать, объяснять</td>
+				</tr>
+				<tr>
+					<td class="chinese">聊天</td>
+					<td class="pinyin">liáotiān</td>
+					<td class="translation">болтать, беседовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">哭</td>
+					<td class="pinyin">kū</td>
+					<td class="translation">плакать</td>
+				</tr>
+				<tr>
+					<td class="chinese">见面</td>
+					<td class="pinyin">jiànmiàn</td>
+					<td class="translation">встречаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">遇到</td>
+					<td class="pinyin">yùdào</td>
+					<td class="translation">встречаться с, сталкиваться с</td>
+				</tr>
+				<tr>
+					<td class="chinese">带</td>
+					<td class="pinyin">dài</td>
+					<td class="translation">брать, носить с собой</td>
+				</tr>
+				<tr>
+					<td class="chinese">拿</td>
+					<td class="pinyin">ná</td>
+					<td class="translation">брать, держать</td>
+				</tr>
+				<tr>
+					<td class="chinese">放</td>
+					<td class="pinyin">fàng</td>
+					<td class="translation">класть, помещать</td>
+				</tr>
+				<tr>
+					<td class="chinese">关</td>
+					<td class="pinyin">guān</td>
+					<td class="translation">закрывать, затворять</td>
+				</tr>
+				<tr>
+					<td class="chinese">站</td>
+					<td class="pinyin">zhān</td>
+					<td class="translation">стоять, вставать, останавливаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">画</td>
+					<td class="pinyin">huà</td>
+					<td class="translation">рисовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">花</td>
+					<td class="pinyin">huá</td>
+					<td class="translation">тратить, расходовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">了解</td>
+					<td class="pinyin">liǎojiě</td>
+					<td class="translation">знать, понимать, уяснять</td>
+				</tr>
+				<tr>
+					<td class="chinese">认为</td>
+					<td class="pinyin">rènwéi</td>
+					<td class="translation">думать, считать</td>
+				</tr>
+				<tr>
+					<td class="chinese">明白</td>
+					<td class="pinyin">míngbai</td>
+					<td class="translation">понимать, осознавать</td>
+				</tr>
+				<tr>
+					<td class="chinese">发现</td>
+					<td class="pinyin">fāxiàn</td>
+					<td class="translation">узнавать, выяснять, обнаруживать</td>
+				</tr>
+				<tr>
+					<td class="chinese">记得</td>
+					<td class="pinyin">jìde</td>
+					<td class="translation">помнить, вспоминать</td>
+				</tr>
+				<tr>
+					<td class="chinese">忘记</td>
+					<td class="pinyin">wàngji</td>
+					<td class="translation">забывать</td>
+				</tr>
+				<tr>
+					<td class="chinese">用</td>
+					<td class="pinyin">yòng</td>
+					<td class="translation">использовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">帮忙</td>
+					<td class="pinyin">bāngmáng</td>
+					<td class="translation">помогать</td>
+				</tr>
+				<tr>
+					<td class="chinese">教</td>
+					<td class="pinyin">jiāo</td>
+					<td class="translation">учить, объяснять; препадавать</td>
+				</tr>
+				<tr>
+					<td class="chinese">复习</td>
+					<td class="pinyin">fùxí</td>
+					<td class="translation">повторять, пересматривать</td>
+				</tr>
+				<tr>
+					<td class="chinese">上网</td>
+					<td class="pinyin">shàngwǎng</td>
+					<td class="translation">сидеть в интернете</td>
+				</tr>
+				<tr>
+					<td class="chinese">起来</td>
+					<td class="pinyin">qǐlái</td>
+					<td class="translation">вставать, подниматься</td>
+				</tr>
+				<tr>
+					<td class="chinese">刷牙</td>
+					<td class="pinyin">shuāyá</td>
+					<td class="translation">чистить зубы</td>
+				</tr>
+				<tr>
+					<td class="chinese">骑</td>
+					<td class="pinyin">qí</td>
+					<td class="translation">ездить на</td>
+				</tr>
+				<tr>
+					<td class="chinese">爬山</td>
+					<td class="pinyin">páshān</td>
+					<td class="translation">подниматься на гору</td>
+				</tr>
+				<tr>
+					<td class="chinese">发烧</td>
+					<td class="pinyin">fāshāo</td>
+					<td class="translation">чувствовать жар, температурить</td>
+				</tr>
+				<tr>
+					<td class="chinese">感冒</td>
+					<td class="pinyin">gǎnmào</td>
+					<td class="translation">простудиться; интересоваться</td>
+				</tr>
+				<tr>
+					<td class="chinese">疼</td>
+					<td class="pinyin">teng</td>
+					<td class="translation">испытывать боль</td>
+				</tr>
+				<tr>
+					<td class="chinese">结束</td>
+					<td class="pinyin">jieshu</td>
+					<td class="translation">заканчивать(ся), завершать(ся)</td>
+				</tr>
+				<tr>
+					<td class="chinese">完成</td>
+					<td class="pinyin">wánchéng</td>
+					<td class="translation">выполнять; заканчивать</td>
+				</tr>
+				<tr>
+					<td class="chinese">打算</td>
+					<td class="pinyin">dǎsuàn</td>
+					<td class="translation">планировать</td>
+				</tr>
+				<tr>
+					<td class="chinese">决定</td>
+					<td class="pinyin">juédìng</td>
+					<td class="translation">решать</td>
+				</tr>
+				<tr>
+					<td class="chinese">需要</td>
+					<td class="pinyin">xūyào</td>
+					<td class="translation">нужно</td>
+				</tr>
+				<tr>
+					<td class="chinese">选择</td>
+					<td class="pinyin">xuǎnzé</td>
+					<td class="translation">выбирать</td>
+				</tr>
+				<tr>
+					<td class="chinese">同意</td>
+					<td class="pinyin">tóngyì</td>
+					<td class="translation">соглашаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">解决</td>
+					<td class="pinyin">jiějué</td>
+					<td class="translation">решать</td>
+				</tr>
+				<tr>
+					<td class="chinese">担心</td>
+					<td class="pinyin">dānxīn</td>
+					<td class="translation">волноваться</td>
+				</tr>
+				<tr>
+					<td class="chinese">生气</td>
+					<td class="pinyin">shēngqì</td>
+					<td class="translation">сердиться</td>
+				</tr>
+				<tr>
+					<td class="chinese">搬</td>
+					<td class="pinyin">bān</td>
+					<td class="translation">переезжать; переносить, перемещать</td>
+				</tr>
+				<tr>
+					<td class="chinese">还</td>
+					<td class="pinyin">huán</td>
+					<td class="translation">отдавать, возвращать</td>
+				</tr>
+				<tr>
+					<td class="chinese">接</td>
+					<td class="pinyin">jiē</td>
+					<td class="translation">получать</td>
+				</tr>
+				<tr>
+					<td class="chinese">比较</td>
+					<td class="pinyin">bǐjiāo</td>
+					<td class="translation">сравнивать</td>
+				</tr>
+				<tr>
+					<td class="chinese">变化</td>
+					<td class="pinyin">biànhuà</td>
+					<td class="translation">изменяться</td>
+				</tr>
+				<tr>
+					<td class="chinese">换</td>
+					<td class="pinyin">huàn</td>
+					<td class="translation">менять, обменивать</td>
+				</tr>
+				<tr>
+					<td class="chinese">借</td>
+					<td class="pinyin">jiè</td>
+					<td class="translation">занимать, брать в долг</td>
+				</tr>
+				<tr>
+					<td class="chinese">发</td>
+					<td class="pinyin">fā</td>
+					<td class="translation">отправлять, посылать</td>
+				</tr>
+				<tr>
+					<td class="chinese">过</td>
+					<td class="pinyin">guò</td>
+					<td class="translation">проводить (время), пропускать</td>
+				</tr>
+				<tr>
+					<td class="chinese">要求</td>
+					<td class="pinyin">yāoqiú</td>
+					<td class="translation">требовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">请假</td>
+					<td class="pinyin">qǐngjiā</td>
+					<td class="translation">отпрашиваться</td>
+				</tr>
+				<tr>
+					<td class="chinese">注意</td>
+					<td class="pinyin">zhūyì</td>
+					<td class="translation">обращать внимание</td>
+				</tr>
+				<tr>
+					<td class="chinese">参加</td>
+					<td class="pinyin">cānjià</td>
+					<td class="translation">принимать участие</td>
+				</tr>
+				<tr>
+					<td class="chinese">迟到</td>
+					<td class="pinyin">chídào</td>
+					<td class="translation">опаздывать</td>
+				</tr>
+				<tr>
+					<td class="chinese">起飞</td>
+					<td class="pinyin">qǐfēi</td>
+					<td class="translation">взлетать</td>
+				</tr>
+				<tr>
+					<td class="chinese">离开</td>
+					<td class="pinyin">líkāi</td>
+					<td class="translation">покидать, оставлять</td>
+				</tr>
+				<tr>
+					<td class="chinese">经过</td>
+					<td class="pinyin">jīngguò</td>
+					<td class="translation">проходить (через или мимо)</td>
+				</tr>
+				<tr>
+					<td class="chinese">练习</td>
+					<td class="pinyin">liànxí</td>
+					<td class="translation">практиковаться</td>
+				</tr>
+				<tr>
+					<td class="chinese">试</td>
+					<td class="pinyin">shì</td>
+					<td class="translation">пробовать, применять, испытывать</td>
+				</tr>
+				<tr>
+					<td class="chinese">提高</td>
+					<td class="pinyin">tígāo</td>
+					<td class="translation">улучшать</td>
+				</tr>
+				<tr>
+					<td class="chinese">检查</td>
+					<td class="pinyin">jiǎnchá</td>
+					<td class="translation">проверять, исследовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">打扫</td>
+					<td class="pinyin">dǎsǎo</td>
+					<td class="translation">подметать, прибирать</td>
+				</tr>
+				<tr>
+					<td class="chinese">相信</td>
+					<td class="pinyin">xiāngxìn</td>
+					<td class="translation">верить, доверять</td>
+				</tr>
+				<tr>
+					<td class="chinese">放心</td>
+					<td class="pinyin">fàngxīn</td>
+					<td class="translation">успокаиваться</td>
+				</tr>
+				<tr>
+					<td class="chinese">着急</td>
+					<td class="pinyin">zháojí</td>
+					<td class="translation">беспокоиться</td>
+				</tr>
+				<tr>
+					<td class="chinese">关心</td>
+					<td class="pinyin">guānxī</td>
+					<td class="translation">беспокоиться</td>
+				</tr>
+				<tr>
+					<td class="chinese">照顾</td>
+					<td class="pinyin">zhàogù</td>
+					<td class="translation">заботиться, ухаживать</td>
+				</tr>
+				<tr>
+					<td class="chinese">分</td>
+					<td class="pinyin">fēn</td>
+					<td class="translation">делить, отделять</td>
+				</tr>
+				<tr>
+					<td class="chinese">长</td>
+					<td class="pinyin">zhǎng</td>
+					<td class="translation">расти, развиваться</td>
+				</tr>
+				<tr>
+					<td class="chinese">害怕</td>
+					<td class="pinyin">hàipà</td>
+					<td class="translation">бояться</td>
+				</tr>
+				<tr>
+					<td class="chinese">小心</td>
+					<td class="pinyin">xiǎoxīn</td>
+					<td class="translation">быть осторожным</td>
+				</tr>
+				<tr>
+					<td class="chinese">影响</td>
+					<td class="pinyin">yǐngxiǎng</td>
+					<td class="translation">влиять, воздействовать</td>
+				</tr>
+				<tr>
+					<td class="chinese">结婚</td>
+					<td class="pinyin">jiéhūn</td>
+					<td class="translation">жениться</td>
+				</tr>
+				<tr>
+					<td class="chinese">必须</td>
+					<td class="pinyin">bìxū</td>
+					<td class="translation">необходимо, следует, должен</td>
+				</tr>
+				<tr>
+					<td class="chinese">应该</td>
+					<td class="pinyin">yīngāi</td>
+					<td class="translation">седует, нужно, должен</td>
+				</tr>
+				<tr>
+					<td class="chinese">愿意</td>
+					<td class="pinyin">yuànyì</td>
+					<td class="translation">хотеть, желать, быть готовым</td>
+				</tr>
+				<tr>
+					<td class="chinese">刮风</td>
+					<td class="pinyin">guāfēng</td>
+					<td class="translation">дуть (о ветре)</td>
+				</tr>
+				<tr>
+					<td class="chinese">留学</td>
+					<td class="pinyin">liúxué</td>
+					<td class="translation">учиться за границей</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Прилагательные -->
+		<div class="button" id="buttonAdjectives" onclick="getButtonID(this)">
+				<p>Прилагательные</p>
+		</div>
+		<table class="wordsList" id="tableAdjectives">
+			<tbody>
+				<tr>
+					<td class="chinese">好</td>
+					<td class="pinyin">hǎo</td>
+					<td class="translation">хорошо</td>
+				</tr>
+				<tr>
+					<td class="chinese">大</td>
+					<td class="pinyin">dà</td>
+					<td class="translation">большой</td>
+				</tr>
+				<tr>
+					<td class="chinese">小</td>
+					<td class="pinyin">xiǎo</td>
+					<td class="translation">маленький</td>
+				</tr>
+				<tr>
+					<td class="chinese">多</td>
+					<td class="pinyin">duō</td>
+					<td class="translation">много</td>
+				</tr>
+				<tr>
+					<td class="chinese">少</td>
+					<td class="pinyin">shǎo</td>
+					<td class="translation">мало</td>
+				</tr>
+				<tr>
+					<td class="chinese">热</td>
+					<td class="pinyin">rè</td>
+					<td class="translation">горячий</td>
+				</tr>
+				<tr>
+					<td class="chinese">冷</td>
+					<td class="pinyin">lěng</td>
+					<td class="translation">холодный</td>
+				</tr>
+				<tr>
+					<td class="chinese">漂亮</td>
+					<td class="pinyin">piàoliang</td>
+					<td class="translation">красивый</td>
+				</tr>
+				<tr>
+					<td class="chinese">高兴</td>
+					<td class="pinyin">gāoxìng</td>
+					<td class="translation">счастливый</td>
+				</tr>
+				<tr>
+					<td class="chinese">快</td>
+					<td class="pinyin">kuài</td>
+					<td class="translation">быстрый</td>
+				</tr>
+				<tr>
+					<td class="chinese">慢</td>
+					<td class="pinyin">màn</td>
+					<td class="translation">медленный</td>
+				</tr>
+				<tr>
+					<td class="chinese">远</td>
+					<td class="pinyin">yuǎn</td>
+					<td class="translation">далекий</td>
+				</tr>
+				<tr>
+					<td class="chinese">近</td>
+					<td class="pinyin">jìn</td>
+					<td class="translation">близкий</td>
+				</tr>
+				<tr>
+					<td class="chinese">对</td>
+					<td class="pinyin">duì</td>
+					<td class="translation">правильный</td>
+				</tr>
+				<tr>
+					<td class="chinese">错</td>
+					<td class="pinyin">cuò</td>
+					<td class="translation">неверный</td>
+				</tr>
+				<tr>
+					<td class="chinese">长</td>
+					<td class="pinyin">cháng</td>
+					<td class="translation">длинный</td>
+				</tr>
+				<tr>
+					<td class="chinese">高</td>
+					<td class="pinyin">gāo</td>
+					<td class="translation">высокий</td>
+				</tr>
+				<tr>
+					<td class="chinese">新</td>
+					<td class="pinyin">xīn</td>
+					<td class="translation">новый</td>
+				</tr>
+				<tr>
+					<td class="chinese">贵</td>
+					<td class="pinyin">guì</td>
+					<td class="translation">дорогой</td>
+				</tr>
+				<tr>
+					<td class="chinese">便宜</td>
+					<td class="pinyin">piányi</td>
+					<td class="translation">дешевый</td>
+				</tr>
+				<tr>
+					<td class="chinese">黑</td>
+					<td class="pinyin">hēi</td>
+					<td class="translation">черный</td>
+				</tr>
+				<tr>
+					<td class="chinese">白</td>
+					<td class="pinyin">bái</td>
+					<td class="translation">белый</td>
+				</tr>
+				<tr>
+					<td class="chinese">红</td>
+					<td class="pinyin">hóng</td>
+					<td class="translation">красный</td>
+				</tr>
+				<tr>
+					<td class="chinese">晴</td>
+					<td class="pinyin">qíng</td>
+					<td class="translation">солнечный</td>
+				</tr>
+				<tr>
+					<td class="chinese">阴</td>
+					<td class="pinyin">yīn</td>
+					<td class="translation">облачный</td>
+				</tr>
+				<tr>
+					<td class="chinese">好吃</td>
+					<td class="pinyin">hǎochī</td>
+					<td class="translation">вкусный</td>
+				</tr>
+				<tr>
+					<td class="chinese">快乐</td>
+					<td class="pinyin">kuàile</td>
+					<td class="translation">счастливый, радостный; веселый</td>
+				</tr>
+				<tr>
+					<td class="chinese">忙</td>
+					<td class="pinyin">máng</td>
+					<td class="translation">занятой</td>
+				</tr>
+				<tr>
+					<td class="chinese">累</td>
+					<td class="pinyin">lèi</td>
+					<td class="translation">усталый</td>
+				</tr>
+				<tr>
+					<td class="chinese">男</td>
+					<td class="pinyin">nán</td>
+					<td class="translation">мужской</td>
+				</tr>
+				<tr>
+					<td class="chinese">女</td>
+					<td class="pinyin">nǚ</td>
+					<td class="translation">женский</td>
+				</tr>
+				<tr>
+					<td class="chinese">坏</td>
+					<td class="pinyin">huài</td>
+					<td class="translation">плохой, сломанный</td>
+				</tr>
+				<tr>
+					<td class="chinese">差</td>
+					<td class="pinyin">chà</td>
+					<td class="translation">плохой, неправельный</td>
+				</tr>
+				<tr>
+					<td class="chinese">久</td>
+					<td class="pinyin">jiǔ</td>
+					<td class="translation">долгий (время)</td>
+				</tr>
+				<tr>
+					<td class="chinese">短</td>
+					<td class="pinyin">duǎn</td>
+					<td class="translation">короткий</td>
+				</tr>
+				<tr>
+					<td class="chinese">矮</td>
+					<td class="pinyin">ǎi</td>
+					<td class="translation">невысокий, низкий</td>
+				</tr>
+				<tr>
+					<td class="chinese">胖</td>
+					<td class="pinyin">pàng</td>
+					<td class="translation">толстый</td>
+				</tr>
+				<tr>
+					<td class="chinese">瘦</td>
+					<td class="pinyin">shòu</td>
+					<td class="translation">худой</td>
+				</tr>
+				<tr>
+					<td class="chinese">旧</td>
+					<td class="pinyin">jiù</td>
+					<td class="translation">старый, использованный</td>
+				</tr>
+				<tr>
+					<td class="chinese">年轻</td>
+					<td class="pinyin">niánqīng</td>
+					<td class="translation">молодой</td>
+				</tr>
+				<tr>
+					<td class="chinese">老</td>
+					<td class="pinyin">lào</td>
+					<td class="translation">старый</td>
+				</tr>
+				<tr>
+					<td class="chinese">黄</td>
+					<td class="pinyin">huáng</td>
+					<td class="translation">желтый</td>
+				</tr>
+				<tr>
+					<td class="chinese">蓝</td>
+					<td class="pinyin">lán</td>
+					<td class="translation">синий</td>
+				</tr>
+				<tr>
+					<td class="chinese">绿</td>
+					<td class="pinyin">lǜ</td>
+					<td class="translation">зеленый</td>
+				</tr>
+				<tr>
+					<td class="chinese">甜</td>
+					<td class="pinyin">tián</td>
+					<td class="translation">сладкий</td>
+				</tr>
+				<tr>
+					<td class="chinese">新鲜</td>
+					<td class="pinyin">xīnxiān</td>
+					<td class="translation">свежий</td>
+				</tr>
+				<tr>
+					<td class="chinese">容易</td>
+					<td class="pinyin">róngyì</td>
+					<td class="translation">простой</td>
+				</tr>
+				<tr>
+					<td class="chinese">难</td>
+					<td class="pinyin">nán</td>
+					<td class="translation">сложный</td>
+				</tr>
+				<tr>
+					<td class="chinese">奇怪</td>
+					<td class="pinyin">qíguài</td>
+					<td class="translation">странный</td>
+				</tr>
+				<tr>
+					<td class="chinese">特别</td>
+					<td class="pinyin">tèbié</td>
+					<td class="translation">особенный</td>
+				</tr>
+				<tr>
+					<td class="chinese">重要</td>
+					<td class="pinyin">zhòngyào</td>
+					<td class="translation">важный</td>
+				</tr>
+				<tr>
+					<td class="chinese">有名</td>
+					<td class="pinyin">yǒumíng</td>
+					<td class="translation">известный</td>
+				</tr>
+				<tr>
+					<td class="chinese">聪明</td>
+					<td class="pinyin">cōngming</td>
+					<td class="translation">умный</td>
+				</tr>
+				<tr>
+					<td class="chinese">可爱</td>
+					<td class="pinyin">kě'ài</td>
+					<td class="translation">милый</td>
+				</tr>
+				<tr>
+					<td class="chinese">难过</td>
+					<td class="pinyin">nánguò</td>
+					<td class="translation">грустный</td>
+				</tr>
+				<tr>
+					<td class="chinese">饿</td>
+					<td class="pinyin">è</td>
+					<td class="translation">голодный</td>
+				</tr>
+				<tr>
+					<td class="chinese">渴</td>
+					<td class="pinyin">kě</td>
+					<td class="translation">хотеть пить</td>
+				</tr>
+				<tr>
+					<td class="chinese">饱</td>
+					<td class="pinyin">bǎo</td>
+					<td class="translation">полный</td>
+				</tr>
+				<tr>
+					<td class="chinese">一样</td>
+					<td class="pinyin">yíyàng</td>
+					<td class="translation">одинаковый</td>
+				</tr>
+				<tr>
+					<td class="chinese">主要</td>
+					<td class="pinyin">zhǔyào</td>
+					<td class="translation">главный</td>
+				</tr>
+				<tr>
+					<td class="chinese">方便</td>
+					<td class="pinyin">fāngbiàn</td>
+					<td class="translation">удобный</td>
+				</tr>
+				<tr>
+					<td class="chinese">安静</td>
+					<td class="pinyin">ānjìng</td>
+					<td class="translation">спокойный</td>
+				</tr>
+				<tr>
+					<td class="chinese">干净</td>
+					<td class="pinyin">gānjìng</td>
+					<td class="translation">чистый</td>
+				</tr>
+				<tr>
+					<td class="chinese">清楚</td>
+					<td class="pinyin">qīngchu</td>
+					<td class="translation">чистый</td>
+				</tr>
+				<tr>
+					<td class="chinese">健康</td>
+					<td class="pinyin">jiànkāng</td>
+					<td class="translation">здоровый</td>
+				</tr>
+				<tr>
+					<td class="chinese">舒服</td>
+					<td class="pinyin">shūfu</td>
+					<td class="translation">удобный</td>
+				</tr>
+				<tr>
+					<td class="chinese">认真</td>
+					<td class="pinyin">rènzhen</td>
+					<td class="translation">серьезный</td>
+				</tr>
+				<tr>
+					<td class="chinese">努力</td>
+					<td class="pinyin">nǔli</td>
+					<td class="translation">старательный</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Наречия -->
+		<div class="button" id="buttonAdverbs" onclick="getButtonID(this)">
+				<p>Наречия</p>
+		</div>
+		<table class="wordsList" id="tableAdverbs">
+			<tbody>
+				<tr>
+					<td class="chinese">不</td>
+					<td class="pinyin">bù</td>
+					<td class="translation">не</td>
+				</tr>
+				<tr>
+					<td class="chinese">没</td>
+					<td class="pinyin">méi</td>
+					<td class="translation">не</td>
+				</tr>
+				<tr>
+					<td class="chinese">很</td>
+					<td class="pinyin">hěn</td>
+					<td class="translation">очень</td>
+				</tr>
+				<tr>
+					<td class="chinese">太</td>
+					<td class="pinyin">tài</td>
+					<td class="translation">крайне, слишком</td>
+				</tr>
+				<tr>
+					<td class="chinese">都</td>
+					<td class="pinyin">dōu</td>
+					<td class="translation">все, весь</td>
+				</tr>
+				<tr>
+					<td class="chinese">非常</td>
+					<td class="pinyin">fēicháng</td>
+					<td class="translation">очень; исключительно</td>
+				</tr>
+				<tr>
+					<td class="chinese">每</td>
+					<td class="pinyin">měi</td>
+					<td class="translation">каждый</td>
+				</tr>
+				<tr>
+					<td class="chinese">最</td>
+					<td class="pinyin">zuì</td>
+					<td class="translation">самый</td>
+				</tr>
+				<tr>
+					<td class="chinese">真</td>
+					<td class="pinyin">zhēn</td>
+					<td class="translation">настоящий, подленный</td>
+				</tr>
+				<tr>
+					<td class="chinese">也</td>
+					<td class="pinyin">yé</td>
+					<td class="translation">тоже</td>
+				</tr>
+				<tr>
+					<td class="chinese">还</td>
+					<td class="pinyin">hái</td>
+					<td class="translation">все еще, также</td>
+				</tr>
+				<tr>
+					<td class="chinese">再</td>
+					<td class="pinyin">zài</td>
+					<td class="translation">снова, еще раз</td>
+				</tr>
+				<tr>
+					<td class="chinese">就</td>
+					<td class="pinyin">jiù</td>
+					<td class="translation">именно, как раз; сейчас, уже, только</td>
+				</tr>
+				<tr>
+					<td class="chinese">别</td>
+					<td class="pinyin">bié</td>
+					<td class="translation">не нужно...</td>
+				</tr>
+				<tr>
+					<td class="chinese">已经</td>
+					<td class="pinyin">yǐjīng</td>
+					<td class="translation">уже</td>
+				</tr>
+				<tr>
+					<td class="chinese">一起</td>
+					<td class="pinyin">yìqǐ</td>
+					<td class="translation">вместе</td>
+				</tr>
+				<tr>
+					<td class="chinese">可能</td>
+					<td class="pinyin">kěnéng</td>
+					<td class="translation">мочь, возможно</td>
+				</tr>
+				<tr>
+					<td class="chinese">正在</td>
+					<td class="pinyin">zhèngzài</td>
+					<td class="translation">в течении; в процессе</td>
+				</tr>
+				<tr>
+					<td class="chinese">及</td>
+					<td class="pinyin">jí</td>
+					<td class="translation">крайне</td>
+				</tr>
+				<tr>
+					<td class="chinese">多么</td>
+					<td class="pinyin">duōme</td>
+					<td class="translation">как, в какой степени</td>
+				</tr>
+				<tr>
+					<td class="chinese">又</td>
+					<td class="pinyin">yòu</td>
+					<td class="translation">снова, опять</td>
+				</tr>
+				<tr>
+					<td class="chinese">只</td>
+					<td class="pinyin">zhǐ</td>
+					<td class="translation">только, просто, всего лишь</td>
+				</tr>
+				<tr>
+					<td class="chinese">马上</td>
+					<td class="pinyin">mǎshàng</td>
+					<td class="translation">немедленно, прямо сейчас</td>
+				</tr>
+				<tr>
+					<td class="chinese">才</td>
+					<td class="pinyin">cái</td>
+					<td class="translation">только что</td>
+				</tr>
+				<tr>
+					<td class="chinese">更</td>
+					<td class="pinyin">gèng</td>
+					<td class="translation">больше</td>
+				</tr>
+				<tr>
+					<td class="chinese">越</td>
+					<td class="pinyin">yuè</td>
+					<td class="translation">все болеше</td>
+				</tr>
+				<tr>
+					<td class="chinese">先</td>
+					<td class="pinyin">xiān</td>
+					<td class="translation">вначале, сперва</td>
+				</tr>
+				<tr>
+					<td class="chinese">几乎</td>
+					<td class="pinyin">jīhū</td>
+					<td class="translation">почти</td>
+				</tr>
+				<tr>
+					<td class="chinese">一定</td>
+					<td class="pinyin">yídìng</td>
+					<td class="translation">обязательно, непременно</td>
+				</tr>
+				<tr>
+					<td class="chinese">一共</td>
+					<td class="pinyin">yígòng</td>
+					<td class="translation">в общем, в целом, в совокупности</td>
+				</tr>
+				<tr>
+					<td class="chinese">其实</td>
+					<td class="pinyin">qíshí</td>
+					<td class="translation">на самом деле, в действительности</td>
+				</tr>
+				<tr>
+					<td class="chinese">突然</td>
+					<td class="pinyin">tūrán</td>
+					<td class="translation">неожиданно, внезапно</td>
+				</tr>
+				<tr>
+					<td class="chinese">一边</td>
+					<td class="pinyin">yìbiān</td>
+					<td class="translation">в то же время</td>
+				</tr>
+				<tr>
+					<td class="chinese">一直</td>
+					<td class="pinyin">yìzhí</td>
+					<td class="translation">всегда, постоянно</td>
+				</tr>
+				<tr>
+					<td class="chinese">比较</td>
+					<td class="pinyin">bǐjǎo</td>
+					<td class="translation">сравнительно, относительно</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Предлоги -->
+		<div class="button" id="buttonPrepositions" onclick="getButtonID(this)">
+				<p>Предлоги</p>
+		</div>
+		<table class="wordsList" id="tablePrepositions">
+			<tbody>
+				<tr>
+					<td class="chinese">跟</td>
+					<td class="pinyin">gēn</td>
+					<td class="translation">вместе с</td>
+				</tr>
+				<tr>
+					<td class="chinese">被</td>
+					<td class="pinyin">bèi</td>
+					<td class="translation">кем-то (страдательный залог)</td>
+				</tr>
+				<tr>
+					<td class="chinese">为</td>
+					<td class="pinyin">wèi</td>
+					<td class="translation">для (кого-то/чего-то)</td>
+				</tr>
+				<tr>
+					<td class="chinese">为了</td>
+					<td class="pinyin">wèile</td>
+					<td class="translation">для того чтобы</td>
+				</tr>
+				<tr>
+					<td class="chinese">关于</td>
+					<td class="pinyin">guānyú</td>
+					<td class="translation">о, относительно, касательно</td>
+				</tr>
+				<tr>
+					<td class="chinese">像</td>
+					<td class="pinyin">xiàng</td>
+					<td class="translation">как (кто-то/что-то)</td>
+				</tr>
+				<tr>
+					<td class="chinese">除了</td>
+					<td class="pinyin">chùle</td>
+					<td class="translation">в дополнении к, кроме, за исключением</td>
+				</tr>
+				<tr>
+					<td class="chinese">向</td>
+					<td class="pinyin">xiàng</td>
+					<td class="translation">в направлении к, у, на</td>
+				</tr>
+				<tr>
+					<td class="chinese">根据</td>
+					<td class="pinyin">gējù</td>
+					<td class="translation">в соответствии с; согласно, в зависимости</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- счетные слова -->
+		<div class="button" id="buttonCounters" onclick="getButtonID(this)">
+				<p>Счетные слова</p>
+		</div>
+		<table class="wordsList" id="tableCounters">
+			<tbody>
+				<tr>
+					<td class="chinese">个</td>
+					<td class="pinyin">gè</td>
+					<td class="translation">штука</td>
+				</tr>
+				<tr>
+					<td class="chinese">块</td>
+					<td class="pinyin">kuài</td>
+					<td class="translation">для юаней</td>
+				</tr>
+				<tr>
+					<td class="chinese">本</td>
+					<td class="pinyin">běn</td>
+					<td class="translation">для книг</td>
+				</tr>
+				<tr>
+					<td class="chinese">岁</td>
+					<td class="pinyin">suì</td>
+					<td class="translation">для возраста (лет)</td>
+				</tr>
+				<tr>
+					<td class="chinese">些</td>
+					<td class="pinyin">xiē</td>
+					<td class="translation">несколько, немного</td>
+				</tr>
+				<tr>
+					<td class="chinese">角</td>
+					<td class="pinyin">jiǎo</td>
+					<td class="translation">для 1/10 юаня</td>
+				</tr>
+				<tr>
+					<td class="chinese">位</td>
+					<td class="pinyin">wèi</td>
+					<td class="translation">для людей</td>
+				</tr>
+				<tr>
+					<td class="chinese">公斤</td>
+					<td class="pinyin">gōngjīn</td>
+					<td class="translation">килограмм</td>
+				</tr>
+				<tr>
+					<td class="chinese">米</td>
+					<td class="pinyin">mǐ</td>
+					<td class="translation">метр</td>
+				</tr>
+				<tr>
+					<td class="chinese">条</td>
+					<td class="pinyin">tiáo</td>
+					<td class="translation">для длинных предметов</td>
+				</tr>
+				<tr>
+					<td class="chinese">只</td>
+					<td class="pinyin">zhī</td>
+					<td class="translation">для некоторых животных</td>
+				</tr>
+				<tr>
+					<td class="chinese">辆</td>
+					<td class="pinyin">liàng</td>
+					<td class="translation">для автомобилей</td>
+				</tr>
+				<tr>
+					<td class="chinese">把</td>
+					<td class="pinyin">bǎ</td>
+					<td class="translation">для предметов с ручкой</td>
+				</tr>
+				<tr>
+					<td class="chinese">种</td>
+					<td class="pinyin">zhǒng</td>
+					<td class="translation">вид, тип, класс, сорт</td>
+				</tr>
+				<tr>
+					<td class="chinese">层</td>
+					<td class="pinyin">céng</td>
+					<td class="translation">этаж</td>
+				</tr>
+				<tr>
+					<td class="chinese">双</td>
+					<td class="pinyin">shuáng</td>
+					<td class="translation">для парных предметов</td>
+				</tr>
+				<tr>
+					<td class="chinese">段</td>
+					<td class="pinyin">duàn</td>
+					<td class="translation">для расстояния или времени</td>
+				</tr>
+				<tr>
+					<td class="chinese">刻</td>
+					<td class="pinyin">kè</td>
+					<td class="translation">четверть</td>
+				</tr>
+				<tr>
+					<td class="chinese">元</td>
+					<td class="pinyin">yuán</td>
+					<td class="translation">для юаней</td>
+				</tr>
+				<tr>
+					<td class="chinese">次</td>
+					<td class="pinyin">cì</td>
+					<td class="translation">порядок действий</td>
+				</tr>
+				<tr>
+					<td class="chinese">件</td>
+					<td class="pinyin">jiàn</td>
+					<td class="translation">для одежды, событий</td>
+				</tr>
+				<tr>
+					<td class="chinese">张</td>
+					<td class="pinyin">zhāng</td>
+					<td class="translation">для тонких (плоских) объектов</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Частицы -->
+		<div class="button" id="buttonParticles" onclick="getButtonID(this)">
+				<p>Частицы</p>
+		</div>
+		<table class="wordsList" id="tableParticles">
+			<tbody>
+				<tr>
+					<td class="chinese">的</td>
+					<td class="pinyin">de</td>
+					<td class="translation">родительный падеж</td>
+				</tr>
+				<tr>
+					<td class="chinese">了</td>
+					<td class="pinyin">le</td>
+					<td class="translation">прошедшее время</td>
+				</tr>
+				<tr>
+					<td class="chinese">吗</td>
+					<td class="pinyin">ma</td>
+					<td class="translation">вопросительная частица</td>
+				</tr>
+				<tr>
+					<td class="chinese">呢</td>
+					<td class="pinyin">ne</td>
+					<td class="translation">...тоже?</td>
+				</tr>
+				<tr>
+					<td class="chinese">得</td>
+					<td class="pinyin">de</td>
+					<td class="translation">образ действия</td>
+				</tr>
+				<tr>
+					<td class="chinese">着</td>
+					<td class="pinyin">zhe</td>
+					<td class="translation">длительность</td>
+				</tr>
+				<tr>
+					<td class="chinese">过</td>
+					<td class="pinyin">guò</td>
+					<td class="translation">завершенность</td>
+				</tr>
+				<tr>
+					<td class="chinese">吧</td>
+					<td class="pinyin">ba</td>
+					<td class="translation">смягчение тона</td>
+				</tr>
+				<tr>
+					<td class="chinese">和</td>
+					<td class="pinyin">hé</td>
+					<td class="translation">и, вместе с</td>
+				</tr>
+				<tr>
+					<td class="chinese">在</td>
+					<td class="pinyin">zài</td>
+					<td class="translation">в</td>
+				</tr>
+				<tr>
+					<td class="chinese">从</td>
+					<td class="pinyin">cóng</td>
+					<td class="translation">из, от, с</td>
+				</tr>
+				<tr>
+					<td class="chinese">往</td>
+					<td class="pinyin">wǎng</td>
+					<td class="translation">по направлению к, в, на</td>
+				</tr>
+				<tr>
+					<td class="chinese">离</td>
+					<td class="pinyin">lí</td>
+					<td class="translation">от</td>
+				</tr>
+				<tr>
+					<td class="chinese">比</td>
+					<td class="pinyin">bǐ</td>
+					<td class="translation">чем, по сравнению с</td>
+				</tr>
+				<tr>
+					<td class="chinese">地</td>
+					<td class="pinyin">de</td>
+					<td class="translation">обстоятельства</td>
+				</tr>
+				<tr>
+					<td class="chinese">啊</td>
+					<td class="pinyin">a</td>
+					<td class="translation">согласие</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Союзы -->
+		<div class="button" id="buttonConjoints" onclick="getButtonID(this)">
+				<p>Союзы</p>
+		</div>
+		<table class="wordsList" id="tableConjoints">
+			<tbody>
+				<tr>
+					<td class="chinese">但是</td>
+					<td class="pinyin">dànshì</td>
+					<td class="translation">но</td>
+				</tr>
+				<tr>
+					<td class="chinese">因为</td>
+					<td class="pinyin">yīnwèi</td>
+					<td class="translation">потому что</td>
+				</tr>
+				<tr>
+					<td class="chinese">所以</td>
+					<td class="pinyin">suǒyǐ</td>
+					<td class="translation">поэтому</td>
+				</tr>
+				<tr>
+					<td class="chinese">虽然</td>
+					<td class="pinyin">suīrán</td>
+					<td class="translation">хотя, несмотря на</td>
+				</tr>
+				<tr>
+					<td class="chinese">还是</td>
+					<td class="pinyin">háishì</td>
+					<td class="translation">или</td>
+				</tr>
+				<tr>
+					<td class="chinese">或者</td>
+					<td class="pinyin">huòzhě</td>
+					<td class="translation">или</td>
+				</tr>
+				<tr>
+					<td class="chinese">然后</td>
+					<td class="pinyin">ránhòu</td>
+					<td class="translation">затем, после</td>
+				</tr>
+				<tr>
+					<td class="chinese">如果</td>
+					<td class="pinyin">rúguǒ</td>
+					<td class="translation">если</td>
+				</tr>
+				<tr>
+					<td class="chinese">而且</td>
+					<td class="pinyin">érqiě</td>
+					<td class="translation">но и, к тому же, еще и</td>
+				</tr>
+				<tr>
+					<td class="chinese">当然</td>
+					<td class="pinyin">dāngrán</td>
+					<td class="translation">конечно</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Фразы -->
+		<div class="button" id="buttonPhrase" onclick="getButtonID(this)">
+				<p>Фразы</p>
+		</div>
+		<table class="wordsList" id="tablePhrase">
+			<tbody>
+				<tr>
+					<td class="chinese">喂</td>
+					<td class="pinyin">wèi</td>
+					<td class="translation">Алло</td>
+				</tr>
+				<tr>
+					<td class="chinese">谢谢</td>
+					<td class="pinyin">xièxie</td>
+					<td class="translation">Спасибо</td>
+				</tr>
+				<tr>
+					<td class="chinese">不客气</td>
+					<td class="pinyin">búkèqi</td>
+					<td class="translation">не за что</td>
+				</tr>
+				<tr>
+					<td class="chinese">再见</td>
+					<td class="pinyin">zàijàn</td>
+					<td class="translation">Пока, До свидания</td>
+				</tr>
+				<tr>
+					<td class="chinese">对不起</td>
+					<td class="pinyin">duìbuqǐ</td>
+					<td class="translation">Извините</td>
+				</tr>
+				<tr>
+					<td class="chinese">没关系</td>
+					<td class="pinyin">méiguānxi</td>
+					<td class="translation">ничего</td>
+				</tr>
+			</tbody>
+		</table>
+		<script src="{% static 'main/js/words.js' %}"></script>
+	</body>
+</html>

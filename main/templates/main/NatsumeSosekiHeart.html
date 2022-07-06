@@ -1,0 +1,775 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'main/css/heart.css' %}">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<p id="title-text">Нацуме Сосэки. Сердце. Часть 1. Глава 1</p>
+				<div class="GoBack">
+					<a href="{% url 'reading' %}"><p>назад</p></a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="helper">
+				<p id="word"></p>
+				<p id="reading"></p>
+				<p id="meaning"></p>
+			</div>
+			<div class="text" id="original-text">
+				<p>
+					<span class="original" id="OrigText_1_1"><span class="singleWord" id="1">私</span>は</span>
+					<span class="original" id="OrigText_1_2"><span class="singleWord" id="2">その人</span>を</span>
+					<span class="original" id="OrigText_1_3"><span class="singleWord" id="3">常に</span></span>
+					<span class="original" id="OrigText_1_4"><span class="singleWord" id="4">先生</span>と</span>
+					<span class="original" id="OrigText_1_5"><span class="singleWord" id="5">呼んでいた</span></span>
+					。
+					<span class="original" id="OrigText_2_1">だから</span>
+					<span class="original" id="OrigText_2_2">ここでも</span>
+					<span class="original" id="OrigText_2_3">ただ</span>
+					<span class="original" id="OrigText_2_4"><span class="singleWord" id="6">先生</span></span>
+					<span class="original" id="OrigText_2_5">と<span class="singleWord" id="7">書く</span></span>
+					<span class="original" id="OrigText_2_6">だけで</span>
+					<span class="original" id="OrigText_2_7"><span class="singleWord" id="8">本名</span>は</span>
+					<span class="original" id="OrigText_2_8"><span class="singleWord" id="9">打ち明けない</span></span>
+					。
+					<span class="original" id="OrigText_3_1">これは</span>
+					<span class="original" id="OrigText_3_2"><span class="singleWord" id="10">世間を</span></span>
+					<span class="original" id="OrigText_3_3"><span class="singleWord" id="11">憚かる</span></span>
+					<span class="original" id="OrigText_3_4"><span class="singleWord" id="12">遠慮</span>というよりも</span>
+					、
+					<span class="original" id="OrigText_3_5"><span class="singleWord" id="13">その方</span>が</span>
+					<span class="original" id="OrigText_3_6"><span class="singleWord" id="14">私</span>にとって</span>
+					<span class="original" id="OrigText_3_7"><span class="singleWord" id="15">自然</span>だからである</span>
+					。
+					<span class="original" id="OrigText_4_1"><span class="singleWord" id="16">私</span>は</span>
+					<span class="original" id="OrigText_4_2"><span class="singleWord" id="17">その人</span>の</span>
+					<span class="original" id="OrigText_4_3"><span class="singleWord" id="18">記憶</span>を<span class="singleWord" id="19">呼び起す</span></span>
+					<span class="original" id="OrigText_4_4">ごとに</span>
+					、
+					<span class="original" id="OrigText_4_5">すぐ</span>
+					<span class="original" id="OrigText_4_6"><span class="singleWord" id="20">「先生」</span></span>
+					<span class="original" id="OrigText_4_7">といいたくなる</span>
+					。
+					<span class="original" id="OrigText_5_1"><span class="singleWord" id="21">筆を</span></span>
+					<span class="original" id="OrigText_5_2"><span class="singleWord" id="22">執っても</span></span>
+					<span class="original" id="OrigText_5_3"><span class="singleWord" id="23">心持は</span></span>
+					<span class="original" id="OrigText_5_4"><span class="singleWord" id="24">同じ事</span>である</span>
+					。
+					<span class="original" id="OrigText_6_1"><span class="singleWord" id="25">よそよそしい</span></span>
+					<span class="original" id="OrigText_6_2"><span class="singleWord" id="26">頭文字</span>などは</span>
+					<span class="original" id="OrigText_6_3">とても<span class="singleWord" id="27">使う</span><span class="singleWord" id="28">気にならない</span></span>
+					。
+				</p>
+				<p>
+					<span class="original" id="OrigText_7_1"><span class="singleWord" id="29">私が</span></span>
+					<span class="original" id="OrigText_7_2"><span class="singleWord" id="30">先生</span>と</span>
+					<span class="original" id="OrigText_7_3"><span class="singleWord" id="31">知り合い</span>になったのは</span>
+					<span class="original" id="OrigText_7_4"><span class="singleWord" id="32">鎌倉</span>である</span>
+					。
+					<span class="original" id="OrigText_8_1"><span class="singleWord" id="33">その時</span></span>
+					<span class="original" id="OrigText_8_2"><span class="singleWord" id="34">私は</span></span>
+					<span class="original" id="OrigText_8_3">まだ</span>
+					<span class="original" id="OrigText_8_4"><span class="singleWord" id="35">若々しい</span></span>
+					<span class="original" id="OrigText_8_5"><span class="singleWord" id="36">書生</span></span>
+					<span class="original" id="OrigText_8_6">であった</span>
+					。
+					<span class="original" id="OrigText_9_1"><span class="singleWord" id="37">暑中休暇</span>を<span class="singleWord" id="38">利用して</span></span>
+					<span class="original" id="OrigText_9_2"><span class="singleWord" id="39">海水浴</span>に<span class="singleWord" id="40">行った</span></span>
+					<span class="original" id="OrigText_9_3"><span class="singleWord" id="41">友達から</span></span>
+					<span class="original" id="OrigText_9_4">ぜひ</span>
+					<span class="original" id="OrigText_9_5"><span class="singleWord" id="42">来い</span></span>
+					<span class="original" id="OrigText_9_6">という</span>
+					<span class="original" id="OrigText_9_7"><span class="singleWord" id="43">端書を</span></span>
+					<span class="original" id="OrigText_9_8"><span class="singleWord" id="44">受け取ったので</span></span>
+					、
+					<span class="original" id="OrigText_9_9"><span class="singleWord" id="45">私</span>は<span class="singleWord" id="46">多少</span>の<span class="singleWord" id="47">金</span>を<span class="singleWord" id="48">工面して</span></span>
+					、
+					<span class="original" id="OrigText_9_10"><span class="singleWord" id="49">出掛ける</span><span class="singleWord" id="50">事にした</span></span>
+					。
+					<span class="original" id="OrigText_10_1"><span class="singleWord" id="51">私は</span></span>
+					<span class="original" id="OrigText_10_2"><span class="singleWord" id="52">金</span>の<span class="singleWord" id="53">工面に</span></span>
+					<span class="original" id="OrigText_10_3"><span class="singleWord" id="54">二、三日を</span></span>
+					<span class="original" id="OrigText_10_4"><span class="singleWord" id="55">費やした</span></span>
+					。
+					<span class="original" id="OrigText_11_1">ところが</span>
+					<span class="original" id="OrigText_11_2"><span class="singleWord" id="56">私</span>が<span class="singleWord" id="57">鎌倉</span>に<span class="singleWord" id="115">着いて</span></span>
+					<span class="original" id="OrigText_11_3"><span class="singleWord" id="58">三日</span>と<span class="singleWord" id="59">経たない</span>うちに</span>
+					、
+					<span class="original" id="OrigText_11_4"><span class="singleWord" id="60">私</span>を</span>
+					<span class="original" id="OrigText_11_5"><span class="singleWord" id="61">呼び寄せた</span></span>
+					<span class="original" id="OrigText_11_6"><span class="singleWord" id="62">友達は</span></span>
+					、
+					<span class="original" id="OrigText_11_7"><span class="singleWord" id="63">急に</span></span>
+					<span class="original" id="OrigText_11_8"><span class="singleWord" id="64">国元から</span></span>
+					<span class="original" id="OrigText_11_9"><span class="singleWord" id="65">帰れ</span></span>
+					<span class="original" id="OrigText_11_10">という<span class="singleWord" id="66">電報を</span></span>
+					<span class="original" id="OrigText_11_11"><span class="singleWord" id="67">受け取った</span></span>
+					。
+					<span class="original" id="OrigText_12_1"><span class="singleWord" id="68">電報には</span></span>
+					<span class="original" id="OrigText_12_2"><span class="singleWord" id="69">母が</span></span>
+					<span class="original" id="OrigText_12_3"><span class="singleWord" id="70">病気だから</span></span>
+					<span class="original" id="OrigText_12_4"><span class="singleWord" id="71">と断ってあった</span></span>
+					<span class="original" id="OrigText_12_5">けれども</span>
+					<span class="original" id="OrigText_12_6"><span class="singleWord" id="72">友達は</span></span>
+					<span class="original" id="OrigText_12_7">それを</span>
+					<span class="original" id="OrigText_12_8"><span class="singleWord" id="73">信じなかった</span></span>
+					。
+					<span class="original" id="OrigText_13_1"><span class="singleWord" id="116">友達は</span></span>
+					<span class="original" id="OrigText_13_2">かねてから</span>
+					<span class="original" id="OrigText_13_3"><span class="singleWord" id="74">国元</span>にいる<span class="singleWord" id="75">親たちに</span></span>
+					<span class="original" id="OrigText_13_4"><span class="singleWord" id="76">勧すすまない</span></span>
+					<span class="original" id="OrigText_13_5"><span class="singleWord" id="77">結婚を</span></span>
+					<span class="original" id="OrigText_13_6"><span class="singleWord" id="78">強しいられていた</span></span>
+					。
+					<span class="original" id="OrigText_14_1"><span class="singleWord" id="79">彼は</span></span>
+					<span class="original" id="OrigText_14_2"><span class="singleWord" id="80">現代の</span></span>
+					<span class="original" id="OrigText_14_3"><span class="singleWord" id="81">習慣</span></span>
+					<span class="original" id="OrigText_14_4">からいうと</span>
+					<span class="original" id="OrigText_14_5"><span class="singleWord" id="82">結婚する</span>には</span>
+					<span class="original" id="OrigText_14_6">あまり</span>
+					<span class="original" id="OrigText_14_7"><span class="singleWord" id="83">年</span>が<span class="singleWord" id="84">若過ぎた</span></span>
+					。
+					<span class="original" id="OrigText_15_1">それに</span>
+					<span class="original" id="OrigText_15_2"><span class="singleWord" id="85">肝心の</span></span>
+					<span class="original" id="OrigText_15_3"><span class="singleWord" id="86">当人が</span></span>
+					<span class="original" id="OrigText_15_4"><span class="singleWord" id="87">気に入らなかった</span></span>
+					。
+					<span class="original" id="OrigText_16_1">それで</span>
+					<span class="original" id="OrigText_16_2"><span class="singleWord" id="88">夏休みに</span></span>
+					<span class="original" id="OrigText_16_3"><span class="singleWord" id="89">当然</span><span class="singleWord" id="90">帰る</span></span>
+					<span class="original" id="OrigText_16_4">べきところを</span>
+					、
+					<span class="original" id="OrigText_16_5">わざと<span class="singleWord" id="91">避けて</span></span>
+					<span class="original" id="OrigText_16_6"><span class="singleWord" id="92">東京の</span></span>
+					<span class="original" id="OrigText_16_7"><span class="singleWord" id="93">近くで</span></span>
+					<span class="original" id="OrigText_16_8"><span class="singleWord" id="94">遊んでいた</span>のである</span>
+					。
+					<span class="original" id="OrigText_17_1"><span class="singleWord" id="95">彼は</span></span>
+					<span class="original" id="OrigText_17_2"><span class="singleWord" id="96">電報を</span></span>
+					<span class="original" id="OrigText_17_3"><span class="singleWord" id="97">私に</span></span>
+					<span class="original" id="OrigText_17_4"><span class="singleWord" id="98">見せて</span></span>
+					<span class="original" id="OrigText_17_5">どうしよう</span>
+					<span class="original" id="OrigText_17_6"><span class="singleWord" id="99">と相談をした</span></span>
+					。
+					<span class="original" id="OrigText_18_1"><span class="singleWord" id="100">私には</span></span>
+					<span class="original" id="OrigText_18_2">どうしていいか</span>
+					<span class="original" id="OrigText_18_3"><span class="singleWord" id="101">分らなかった</span></span>
+					。
+					<span class="original" id="OrigText_19_1">けれども</span>
+					<span class="original" id="OrigText_19_2"><span class="singleWord" id="102">実際</span></span>
+					<span class="original" id="OrigText_19_3"><span class="singleWord" id="103">彼の</span></span>
+					<span class="original" id="OrigText_19_4"><span class="singleWord" id="104">母が</span></span>
+					<span class="original" id="OrigText_19_5"><span class="singleWord" id="105">病気である</span></span>
+					<span class="original" id="OrigText_19_6">とすれば</span>
+					<span class="original" id="OrigText_19_7"><span class="singleWord" id="106">彼は</span></span>
+					<span class="original" id="OrigText_19_8"><span class="singleWord" id="107">固より</span></span>
+					<span class="original" id="OrigText_19_9"><span class="singleWord" id="108">帰る</span>べき</span>
+					<span class="original" id="OrigText_19_10">はずであった</span>
+					。
+					<span class="original" id="OrigText_20_1">それで<span class="singleWord" id="109">彼は</span></span>
+					<span class="original" id="OrigText_20_2">とうとう</span>
+					<span class="original" id="OrigText_20_3"><span class="singleWord" id="110">帰る</span><span class="singleWord" id="111">事になった</span></span>
+					。
+					<span class="original" id="OrigText_21_1">せっかく<span class="singleWord" id="112">来た</span></span>
+					<span class="original" id="OrigText_21_2"><span class="singleWord" id="113">私は</span></span>
+					<span class="original" id="OrigText_21_3"><span class="singleWord" id="117">一人</span></span>
+					<span class="original" id="OrigText_21_4"><span class="singleWord" id="114">取り残された</span></span>
+					。
+				</p>
+				<p>
+					<span class="original" id="OrigText_22_1"><span class="singleWord" id="118">学校</span>の<span class="singleWord" id="119">授業</span>が</span>
+					<span class="original" id="OrigText_22_2"><span class="singleWord" id="120">始まる</span>には</span>
+					<span class="original" id="OrigText_22_3">まだ<span class="singleWord" id="121">大分</span><span class="singleWord" id="122">日数</span>があるので</span>
+					<span class="original" id="OrigText_22_4"><span class="singleWord" id="123">鎌倉に</span></span>
+					<span class="original" id="OrigText_22_5">おってもよし</span>
+					、
+					<span class="original" id="OrigText_22_6"><span class="singleWord" id="124">帰ってもよい</span></span>
+					<span class="original" id="OrigText_22_7">という<span class="singleWord" id="125">境遇</span>にいた<span class="singleWord" id="126">私は</span></span>
+					、
+					<span class="original" id="OrigText_22_8"><span class="singleWord" id="127">当分</span></span>
+					<span class="original" id="OrigText_22_9"><span class="singleWord" id="128">元の</span></span>
+					<span class="original" id="OrigText_22_10"><span class="singleWord" id="129">宿に</span></span>
+					<span class="original" id="OrigText_22_11"><span class="singleWord" id="130">留まる</span></span>
+					<span class="original" id="OrigText_22_12"><span class="singleWord" id="131">覚悟をした</span></span>
+					。
+					<span class="original" id="OrigText_23_1"><span class="singleWord" id="132">友達は</span></span>
+					<span class="original" id="OrigText_23_2"><span class="singleWord" id="133">中国</span>のある</span>
+					<span class="original" id="OrigText_23_3"><span class="singleWord" id="134">資産家の</span></span>
+					<span class="original" id="OrigText_23_4"><span class="singleWord" id="135">息子で</span></span>
+					<span class="original" id="OrigText_23_5"><span class="singleWord" id="136">金に</span></span>
+					<span class="original" id="OrigText_23_6"><span class="singleWord" id="137">不自由</span>のない<span class="singleWord" id="138">男であった</span></span>
+					<span class="original" id="OrigText_23_7">けれども</span>
+					、
+					<span class="original" id="OrigText_23_8"><span class="singleWord" id="139">学校が学校なのと</span></span>
+					<span class="original" id="OrigText_23_9"><span class="singleWord" id="140">年が年なので</span></span>
+					、
+					<span class="original" id="OrigText_23_10"><span class="singleWord" id="141">生活</span>の<span class="singleWord" id="142">程度</span>は</span>
+					<span class="original" id="OrigText_23_11"><span class="singleWord" id="143">私と</span></span>
+					<span class="original" id="OrigText_23_12">そう<span class="singleWord" id="144">変り</span>もしなかった</span>
+					。
+					<span class="original" id="OrigText_24_1">したがって</span>
+					<span class="original" id="OrigText_24_2"><span class="singleWord" id="145">一人ぼっち</span>になった</span>
+					<span class="original" id="OrigText_24_3"><span class="singleWord" id="146">私</span>は<span class="singleWord" id="147">別に</span></span>
+					<span class="original" id="OrigText_24_4"><span class="singleWord" id="148">恰好な</span></span>
+					<span class="original" id="OrigText_24_5"><span class="singleWord" id="149">宿を</span></span>
+					<span class="original" id="OrigText_24_6"><span class="singleWord" id="150">探す</span><span class="singleWord" id="151">面倒も</span>もたなかったのである</span>
+					。
+				</p>
+				<p>
+					<span class="original" id="OrigText_25_1"><span class="singleWord" id="152">宿は</span></span>
+					<span class="original" id="OrigText_25_2"><span class="singleWord" id="153">鎌倉でも</span></span>
+					<span class="original" id="OrigText_25_3"><span class="singleWord" id="154">辺鄙な</span></span>
+					<span class="original" id="OrigText_25_4"><span class="singleWord" id="155">方角に</span></span>
+					<span class="original" id="OrigText_25_5">あった</span>
+					。
+					<span class="original" id="OrigText_26_1"><span class="singleWord" id="156">玉突だの</span></span>
+					<span class="original" id="OrigText_26_2">アイスクリームだの</span>
+					<span class="original" id="OrigText_26_3">という</span>
+					<span class="original" id="OrigText_26_4">ハイカラなものには</span>
+					<span class="original" id="OrigText_26_5"><span class="singleWord" id="157">長い</span></span>
+					<span class="original" id="OrigText_26_6"><span class="singleWord" id="158">畷を</span></span>
+					<span class="original" id="OrigText_26_7"><span class="singleWord" id="159">一つ</span><span class="singleWord" id="160">越さなければ</span><span class="singleWord" id="161">手が</span><span class="singleWord" id="162">届かなかった</span></span>
+					。
+					<span class="original" id="OrigText_27_1"><span class="singleWord" id="163">車で</span></span>
+					<span class="original" id="OrigText_27_2"><span class="singleWord" id="164">行っても</span></span>
+					<span class="original" id="OrigText_27_3"><span class="singleWord" id="165">二十銭</span>は</span>
+					<span class="original" id="OrigText_27_4"><span class="singleWord" id="166">取られた</span></span>
+					。
+					<span class="original" id="OrigText_28_1">けれども</span>
+					<span class="original" id="OrigText_28_2"><span class="singleWord" id="167">個人</span>の<span class="singleWord" id="168">別荘</span>は</span>
+					<span class="original" id="OrigText_28_3">そこここに</span>
+					<span class="original" id="OrigText_28_4">いくつでも<span class="singleWord" id="169">建てられていた</span></span>
+					。
+					<span class="original" id="OrigText_29_1">それに</span>
+					<span class="original" id="OrigText_29_2"><span class="singleWord" id="170">海へは</span></span>
+					<span class="original" id="OrigText_29_3">ごく</span>
+					<span class="original" id="OrigText_29_4"><span class="singleWord" id="171">近い</span></span>
+					<span class="original" id="OrigText_29_5">ので</span>
+					<span class="original" id="OrigText_29_6"><span class="singleWord" id="172">海水浴</span>をやるには</span>
+					<span class="original" id="OrigText_29_7"><span class="singleWord" id="173">至極</span><span class="singleWord" id="174">便利な</span></span>
+					<span class="original" id="OrigText_29_8"><span class="singleWord" id="175">地位</span>を<span class="singleWord" id="176">占めていた</span></span>
+					。
+				</p>
+				<p>
+					<span class="original" id="OrigText_30_1"><span class="singleWord" id="177">私は</span></span>
+					<span class="original" id="OrigText_30_2"><span class="singleWord" id="178">毎日</span></span>
+					<span class="original" id="OrigText_30_3"><span class="singleWord" id="179">海へ</span></span>
+					<span class="original" id="OrigText_30_4">はいりに</span>
+					<span class="original" id="OrigText_30_5"><span class="singleWord" id="180">出掛けた</span></span>
+					。
+					<span class="original" id="OrigText_31_1"><span class="singleWord" id="181">古い</span><span class="singleWord" id="182">燻ぶり返った</span><span class="singleWord" id="183">藁葺</span>の<span class="singleWord" id="184">間を</span></span>
+					<span class="original" id="OrigText_31_2"><span class="singleWord" id="185">通り抜けて</span></span>
+					<span class="original" id="OrigText_31_3"><span class="singleWord" id="186">磯へ</span><span class="singleWord" id="187">下りると</span></span>
+					、
+					<span class="original" id="OrigText_31_4"><span class="singleWord" id="188">この辺に</span></span>
+					<span class="original" id="OrigText_31_5">これほどの</span>
+					<span class="original" id="OrigText_31_6"><span class="singleWord" id="189">都会</span><span class="singleWord" id="190">人種が</span></span>
+					<span class="original" id="OrigText_31_7"><span class="singleWord" id="191">住んでいる</span></span>
+					<span class="original" id="OrigText_31_8">かと<span class="singleWord" id="192">思う</span>ほど</span>
+					、
+					<span class="original" id="OrigText_31_9"><span class="singleWord" id="193">避暑</span>に<span class="singleWord" id="194">来た</span></span>
+					<span class="original" id="OrigText_31_10"><span class="singleWord" id="195">男</span>や<span class="singleWord" id="196">女</span>で</span>
+					<span class="original" id="OrigText_31_11"><span class="singleWord" id="197">砂</span>の<span class="singleWord" id="198">上が</span></span>
+					<span class="original" id="OrigText_31_12"><span class="singleWord" id="199">動いていた</span></span>
+					。
+					<span class="original" id="OrigText_32_1"><span class="singleWord" id="200">ある時は</span></span>
+					<span class="original" id="OrigText_32_2"><span class="singleWord" id="201">海</span>の<span class="singleWord" id="276">中</span>が</span>
+					<span class="original" id="OrigText_32_3"><span class="singleWord" id="202">銭湯</span>のように</span>
+					<span class="original" id="OrigText_32_4"><span class="singleWord" id="203">黒い</span></span>
+					<span class="original" id="OrigText_32_5"><span class="singleWord" id="204">頭で</span></span>
+					<span class="original" id="OrigText_32_6">ごちゃごちゃしている<span class="singleWord" id="205">事</span>もあった</span>
+					。
+					<span class="original" id="OrigText_33_1"><span class="singleWord" id="206">その中に</span></span>
+					<span class="original" id="OrigText_33_2"><span class="singleWord" id="207">知った人</span>を</span>
+					<span class="original" id="OrigText_33_3"><span class="singleWord" id="208">一人</span>ももたない</span>
+					<span class="original" id="OrigText_33_4"><span class="singleWord" id="209">私も</span></span>
+					、
+					<span class="original" id="OrigText_33_5">こういう</span>
+					<span class="original" id="OrigText_33_6"><span class="singleWord" id="210">賑やかな</span></span>
+					<span class="original" id="OrigText_33_7"><span class="singleWord" id="211">景色</span>の<span class="singleWord" id="212">中</span>に</span>
+					<span class="original" id="OrigText_33_8"><span class="singleWord" id="213">裹まれて</span></span>
+					、
+					<span class="original" id="OrigText_33_9"><span class="singleWord" id="214">砂</span>の<span class="singleWord" id="215">上</span>に</span>
+					<span class="original" id="OrigText_33_10"><span class="singleWord" id="216">寝そべってみたり</span></span>
+					、
+					<span class="original" id="OrigText_33_11"><span class="singleWord" id="217">膝頭を</span></span>
+					<span class="original" id="OrigText_33_12"><span class="singleWord" id="218">波に</span></span>
+					<span class="original" id="OrigText_33_13"><span class="singleWord" id="219">打たして</span></span>
+					<span class="original" id="OrigText_33_14">そこいらを<span class="singleWord" id="220">跳ね廻る</span>のは</span>
+					<span class="original" id="OrigText_33_15"><span class="singleWord" id="221">愉快</span>であった</span>
+					。
+				</p>
+				<p>
+					<span class="original" id="OrigText_34_1"><span class="singleWord" id="222">私は</span></span>
+					<span class="original" id="OrigText_34_2"><span class="singleWord" id="223">実に</span><span class="singleWord" id="224">先生を</span></span>
+					<span class="original" id="OrigText_34_3">この<span class="singleWord" id="225">雑沓</span>の<span class="singleWord" id="226">間</span>に</span>
+					<span class="original" id="OrigText_34_4"><span class="singleWord" id="227">見付け出した</span>のである</span>
+					。
+					<span class="original" id="OrigText_35_1"><span class="singleWord" id="228">その時</span></span>
+					<span class="original" id="OrigText_35_2"><span class="singleWord" id="229">海岸</span>には</span>
+					<span class="original" id="OrigText_35_3"><span class="singleWord" id="230">掛茶屋</span>が</span>
+					<span class="original" id="OrigText_35_4"><span class="singleWord" id="231">二軒</span>あった</span>
+					。
+					<span class="original" id="OrigText_36_1"><span class="singleWord" id="232">私</span>は</span>
+					<span class="original" id="OrigText_36_2">ふとした<span class="singleWord" id="233">機会</span>から</span>
+					<span class="original" id="OrigText_36_3">その<span class="singleWord" id="234">一軒</span>の<span class="singleWord" id="276">方</span>に</span>
+					<span class="original" id="OrigText_36_4"><span class="singleWord" id="235">行き慣れていた</span></span>
+					。
+					<span class="original" id="OrigText_37_1"><span class="singleWord" id="236">長谷辺</span>に<span class="singleWord" id="237">大きな</span><span class="singleWord" id="238">別荘</span>を<span class="singleWord" id="239">構えている</span><span class="singleWord" id="240">人</span>と</span>
+					<span class="original" id="OrigText_37_2"><span class="singleWord" id="241">違って</span></span>
+					、
+					<span class="original" id="OrigText_37_3"><span class="singleWord" id="242">各自</span>に</span>
+					<span class="original" id="OrigText_37_4"><span class="singleWord" id="243">専有</span>の</span>
+					<span class="original" id="OrigText_37_5"><span class="singleWord" id="244">着換場</span>を</span>
+					<span class="original" id="OrigText_37_6"><span class="singleWord" id="245">拵えていない</span></span>
+					<span class="original" id="OrigText_37_7">ここいらの<span class="singleWord" id="246">避暑客</span>には</span>
+					、
+					<span class="original" id="OrigText_37_8">ぜひとも</span>
+					<span class="original" id="OrigText_37_9">こうした<span class="singleWord" id="247">共同</span><span class="singleWord" id="248">着換所</span>といった<span class="singleWord" id="249">風</span>なものが</span>
+					<span class="original" id="OrigText_37_10"><span class="singleWord" id="250">必要</span>なのであった</span>
+					。
+					<span class="original" id="OrigText_38_1"><span class="singleWord" id="251">彼ら</span>はここで</span>
+					<span class="original" id="OrigText_38_2"><span class="singleWord" id="252">茶</span>を</span>
+					<span class="original" id="OrigText_38_3"><span class="singleWord" id="253">飲み</span></span>
+					、
+					<span class="original" id="OrigText_38_4">ここで</span>
+					<span class="original" id="OrigText_38_5"><span class="singleWord" id="254">休息する</span></span>
+					<span class="original" id="OrigText_38_6"><span class="singleWord" id="255">外に</span></span>
+					、
+					<span class="original" id="OrigText_38_7">ここで</span>
+					<span class="original" id="OrigText_38_8"><span class="singleWord" id="256">海水着</span>を</span>
+					<span class="original" id="OrigText_38_9"><span class="singleWord" id="257">洗濯させたり</span></span>
+					、
+					<span class="original" id="OrigText_38_10">ここで</span>
+					<span class="original" id="OrigText_38_11"><span class="singleWord" id="258">鹹はゆい</span></span>
+					<span class="original" id="OrigText_38_12"><span class="singleWord" id="259">身体</span>を</span>
+					<span class="original" id="OrigText_38_13"><span class="singleWord" id="260">清めたり</span></span>
+					、
+					<span class="original" id="OrigText_38_14">ここへ<span class="singleWord" id="261">帽子</span></span>
+					<span class="original" id="OrigText_38_15">や</span>
+					<span class="original" id="OrigText_38_16"><span class="singleWord" id="262">傘</span>を</span>
+					<span class="original" id="OrigText_38_17"><span class="singleWord" id="263">預けたり</span>するのである</span>
+					。
+					<span class="original" id="OrigText_39_1"><span class="singleWord" id="264">海水着</span>を</span>
+					<span class="original" id="OrigText_39_2"><span class="singleWord" id="265">持たない</span></span>
+					<span class="original" id="OrigText_39_3"><span class="singleWord" id="266">私</span>にも</span>
+					<span class="original" id="OrigText_39_4"><span class="singleWord" id="267">持物</span>を<span class="singleWord" id="268">盗まれる</span></span>
+					<span class="original" id="OrigText_39_5"><span class="singleWord" id="269">恐れ</span>はあった</span>
+					<span class="original" id="OrigText_39_6">ので</span>
+					、
+					<span class="original" id="OrigText_39_7"><span class="singleWord" id="270">私</span>は</span>
+					<span class="original" id="OrigText_39_8"><span class="singleWord" id="271">海</span>へ</span>
+					<span class="original" id="OrigText_39_9">はいる</span>
+					<span class="original" id="OrigText_39_10">たびに</span>
+					<span class="original" id="OrigText_39_11">その<span class="singleWord" id="272">茶屋</span>へ</span>
+					<span class="original" id="OrigText_39_12"><span class="singleWord" id="273">一切</span>を</span>
+					<span class="original" id="OrigText_39_13"><span class="singleWord" id="274">脱ぎ棄てる</span></span>
+					<span class="original" id="OrigText_39_14"><span class="singleWord" id="275">事</span>にしていた</span>
+					。
+				</p>
+			</div>
+			<div class="text" id="translation-text">
+				<p>
+					<span class="translation" id="TranText_1_1">Я</span>
+					<span class="translation" id="TranText_1_2">всегда</span>
+					<span class="translation" id="TranText_1_3">называл</span>
+					<span class="translation" id="TranText_1_4">его</span>
+					<span class="translation" id="TranText_1_5">учителем</span>
+					.
+					<span class="translation" id="TranText_2_1">Поэтому</span> 
+					<span class="translation" id="TranText_2_2">и здесь</span> 
+					<span class="translation" id="TranText_2_3">буду называть его</span> 
+					<span class="translation" id="TranText_2_4">только</span> 
+					<span class="translation" id="TranText_2_5">„учитель“</span> 
+					<span class="translation" id="TranText_2_6">и не открою</span> 
+					<span class="translation" id="TranText_2_7">его настоящего имени</span>
+					.
+					<span class="translation" id="TranText_3_1">И вовсе не потому</span>
+					,
+					<span class="translation" id="TranText_3_2">чтобы</span>
+					<span class="translation" id="TranText_3_3">я боялся</span>
+					<span class="translation" id="TranText_3_4">света</span>
+					;
+					<span class="translation" id="TranText_3_5">скорее просто по той причине</span>
+					,
+					<span class="translation" id="TranText_3_6">что так</span>
+					<span class="translation" id="TranText_3_7">для меня</span>
+					<span class="translation" id="TranText_3_8">естественнее</span>
+					.
+					<span class="translation" id="TranText_4_1">Как только</span>
+					<span class="translation" id="TranText_4_2">я</span>
+					<span class="translation" id="TranText_4_3">вспоминаю</span>
+					<span class="translation" id="TranText_4_4">о нём</span>
+					,
+					<span class="translation" id="TranText_4_5">тут же</span>
+					<span class="translation" id="TranText_4_6">мне хочется сказать</span>
+					:
+					<span class="translation" id="TranText_4_7">„учитель“</span>
+					.
+					<span class="translation" id="TranText_5_1">И когда я беру в руки</span>
+					<span class="translation" id="TranText_5_2">перо</span>
+					,
+					<span class="translation" id="TranText_5_3">у меня возникает то же</span>
+					<span class="translation" id="TranText_5_4">ощущение</span>
+					.
+					<span class="translation" id="TranText_6_1">Я никак не могу заставить себя писать</span>
+					<span class="translation" id="TranText_6_2">чуждые мне</span>
+					<span class="translation" id="TranText_6_3">буквы его имени</span>
+					.
+				</p>
+				<p>
+					<span class="translation" id="TranText_7_1">Я </span>
+					<span class="translation" id="TranText_7_2">познакомился</span>
+					<span class="translation" id="TranText_7_3">с учителем</span>
+					<span class="translation" id="TranText_7_4">в Камакура</span>
+					. 
+					<span class="translation" id="TranText_8_1">Тогда</span>
+					<span class="translation" id="TranText_8_2">я</span>
+					<span class="translation" id="TranText_8_3">был</span>
+					<span class="translation" id="TranText_8_4">ещё совсем</span>
+					<span class="translation" id="TranText_8_5">юным</span>
+					<span class="translation" id="TranText_8_6">студентом</span>
+					. 
+					<span class="translation" id="TranText_9_1">Раз как-то я получил </span>
+					<span class="translation" id="TranText_9_2">от своего приятеля</span>
+					, 
+					<span class="translation" id="TranText_9_3">жившего во время летних каникул</span>
+					<span class="translation" id="TranText_9_4">на морских купаньях</span>
+					, 
+					<span class="translation" id="TranText_9_5">открытку</span>
+					, 
+					<span class="translation" id="TranText_9_6">гласившую</span>
+					: 
+					„
+					<span class="translation" id="TranText_9_7">Приезжай </span>
+					<span class="translation" id="TranText_9_8">непременно</span>
+					“. 
+					<span class="translation" id="TranText_9_9">У меня было немного денег</span>
+					, 
+					<span class="translation" id="TranText_9_10">и я поехал</span>
+					. 
+					<span class="translation" id="TranText_10_1">По своим деньгам</span>
+					<span class="translation" id="TranText_10_2">я</span>
+					<span class="translation" id="TranText_10_3">предполагал пробыть там</span>
+					<span class="translation" id="TranText_10_4">денька два-три</span>
+					. 
+					<span class="translation" id="TranText_11_1">Но</span>
+					<span class="translation" id="TranText_11_2">не прошло ещё и трёх дней</span>
+					<span class="translation" id="TranText_11_3">после моего приезда</span>
+					, 
+					<span class="translation" id="TranText_11_4">как</span>
+					<span class="translation" id="TranText_11_5">вызвавший</span>
+					<span class="translation" id="TranText_11_6">меня</span>
+					<span class="translation" id="TranText_11_7">приятель</span>
+					<span class="translation" id="TranText_11_8">получил</span>
+					<span class="translation" id="TranText_11_9">со своей родины</span>
+					<span class="translation" id="TranText_11_10">телеграмму</span>
+					: 
+					„
+					<span class="translation" id="TranText_11_11">Приезжай</span>
+					“
+					. 
+					<span class="translation" id="TranText_12_1">В телеграмме</span>
+					<span class="translation" id="TranText_12_2">было указано при этом</span>
+					, 
+					<span class="translation" id="TranText_12_3">что больна</span>
+					<span class="translation" id="TranText_12_4">его мать</span>
+					. 
+					<span class="translation" id="TranText_12_5">Но</span>
+					<span class="translation" id="TranText_12_6">приятель</span>
+					<span class="translation" id="TranText_12_7">этому</span>
+					<span class="translation" id="TranText_12_8">не верил</span>
+					. 
+					<span class="translation" id="TranText_13_1">Уже с давних пор</span>
+					<span class="translation" id="TranText_13_2">родители</span>
+					<span class="translation" id="TranText_13_3">принуждали</span>
+					<span class="translation" id="TranText_13_4">его</span>
+					<span class="translation" id="TranText_13_5">жениться</span>
+					, 
+					<span class="translation" id="TranText_13_6">чего он вовсе не хотел</span>
+					. 
+					<span class="translation" id="TranText_14_1">С точки зрения</span>
+					<span class="translation" id="TranText_14_2">нынешних</span>
+					<span class="translation" id="TranText_14_3">нравов</span>
+					<span class="translation" id="TranText_14_4">он</span>
+					<span class="translation" id="TranText_14_5">был ещё</span>
+					<span class="translation" id="TranText_14_6">слишком молод</span>
+					<span class="translation" id="TranText_14_7">для брака</span>
+					. 
+					<span class="translation" id="TranText_15_1">К тому же и</span>
+					<span class="translation" id="TranText_15_2">девушка</span>
+					, 
+					<span class="translation" id="TranText_15_3">которую намечали ему в жёны</span>
+					, 
+					<span class="translation" id="TranText_15_4">ему не нравилась</span>
+					. 
+					<span class="translation" id="TranText_16_1">Поэтому</span>
+					,
+					<span class="translation" id="TranText_16_2">вместо того чтобы</span>
+					<span class="translation" id="TranText_16_3">на летние каникулы</span>
+					<span class="translation" id="TranText_16_4">поехать домой</span>
+					,
+					<span class="translation" id="TranText_16_5">как следовало бы</span>
+					,
+					<span class="translation" id="TranText_16_6">он отдыхал здесь</span>
+					, 
+					<span class="translation" id="TranText_16_7">поблизости от</span>
+					<span class="translation" id="TranText_16_8">Токио</span>
+					.
+					<span class="translation" id="TranText_17_1">Он</span>
+					<span class="translation" id="TranText_17_2">показал</span>
+					<span class="translation" id="TranText_17_3">мне</span>
+					<span class="translation" id="TranText_17_4">телеграмму</span>
+					<span class="translation" id="TranText_17_5">и стал советоваться со мной</span> 
+					,
+					<span class="translation" id="TranText_17_6">что делать</span>
+					. 
+					<span class="translation" id="TranText_18_1">Я сам</span>
+					<span class="translation" id="TranText_18_2">не знал</span>
+					, 
+					<span class="translation" id="TranText_18_3">как следовало ему поступить</span>
+					. 
+					<span class="translation" id="TranText_19_1">Ведь</span>
+					<span class="translation" id="TranText_19_2">если</span>
+					<span class="translation" id="TranText_19_3">его</span>
+					<span class="translation" id="TranText_19_4">мать</span>
+					<span class="translation" id="TranText_19_5">в самом деле</span>
+					<span class="translation" id="TranText_19_6">больна</span>
+					, 
+					<span class="translation" id="TranText_19_7">ему</span>
+					, 
+					<span class="translation" id="TranText_19_8">конечно</span>
+					,
+					<span class="translation" id="TranText_19_9">нужно было</span>
+					<span class="translation" id="TranText_19_10">поехать</span>
+					. 
+					<span class="translation" id="TranText_20_1">В конце концов</span>
+					<span class="translation" id="TranText_20_2">он</span>
+					<span class="translation" id="TranText_20_3">поехал</span>
+					. 
+					<span class="translation" id="TranText_21_1">И я</span>
+					,
+					<span class="translation" id="TranText_21_2">специально ради него прибывший сюда</span>
+					,
+					<span class="translation" id="TranText_21_3">остался</span>
+					<span class="translation" id="TranText_21_4">один</span>
+					.
+				</p>
+				<p>
+					<span class="translation" id="TranText_22_1">До начала</span> 
+					<span class="translation" id="TranText_22_2">учебных занятий</span>
+					<span class="translation" id="TranText_22_3">было ещё далеко</span>
+					; 
+					<span class="translation" id="TranText_22_4">мне было всё равно</span>
+					, 
+					<span class="translation" id="TranText_22_5">оставаться ли</span>
+					<span class="translation" id="TranText_22_6">в Камакура</span>
+					<span class="translation" id="TranText_22_7">или возвращаться обратно к себе</span>
+					, 
+					<span class="translation" id="TranText_22_8">и я решил</span>
+					<span class="translation" id="TranText_22_9">остаться</span>
+					<span class="translation" id="TranText_22_10">на некоторое время</span>
+					<span class="translation" id="TranText_22_11">в той же</span>
+					<span class="translation" id="TranText_22_12">гостинице</span>
+					.
+					<span class="translation" id="TranText_23_1">Приятель мой</span>
+					<span class="translation" id="TranText_23_2">был сыном</span>
+					<span class="translation" id="TranText_23_3">одного из состоятельных людей</span>
+					<span class="translation" id="TranText_23_4">в Тюгоку</span>
+					<span class="translation" id="TranText_23_5">и не знал затруднений</span>
+					<span class="translation" id="TranText_23_6">в деньгах</span>
+					. 
+					<span class="translation" id="TranText_23_7">Но</span>
+					<span class="translation" id="TranText_23_8">благодаря своему положению студента</span>
+					<span class="translation" id="TranText_23_9">и возрасту</span>
+					<span class="translation" id="TranText_23_10">по образу своей жизни</span>
+					<span class="translation" id="TranText_23_11">он  не отличался особенно</span>
+					<span class="translation" id="TranText_23_12">от меня</span>
+					. 
+					<span class="translation" id="TranText_24_1">Поэтому</span>
+					,
+					<span class="translation" id="TranText_24_2">оставшись один</span>
+					,
+					<span class="translation" id="TranText_24_3">я</span>
+					<span class="translation" id="TranText_24_4">мог и не переезжать в другую</span>
+					,
+					<span class="translation" id="TranText_24_5">более подходящую для меня</span>
+					<span class="translation" id="TranText_24_6">гостиницу</span>
+					.
+				</p>
+				<p>
+					<span class="translation" id="TranText_25_1">Гостиница</span>
+					<span class="translation" id="TranText_25_2">находилась в</span>
+					<span class="translation" id="TranText_25_3">глухом</span>
+					<span class="translation" id="TranText_25_4">месте</span>
+					<span class="translation" id="TranText_25_5">Камакура</span>
+					.
+					<span class="translation" id="TranText_26_1">Чтобы добраться до модных,оживлённых местечек</span>
+					,
+					<span class="translation" id="TranText_26_2">вроде</span>
+					<span class="translation" id="TranText_26_3">биллиардных</span>
+					,
+					<span class="translation" id="TranText_26_4">кондитерских</span>
+					,
+					<span class="translation" id="TranText_26_5">нужно было пройти</span>
+					<span class="translation" id="TranText_26_6">длинную</span>
+					<span class="translation" id="TranText_26_7">дорогу между полями</span>
+					. 
+					<span class="translation" id="TranText_27_1">Рикша</span>
+					<span class="translation" id="TranText_27_2">до тех мест</span>
+					<span class="translation" id="TranText_27_3">брал</span>
+					<span class="translation" id="TranText_27_4">двадцать сэн</span>
+					. 
+					<span class="translation" id="TranText_28_1">Однако</span>
+					<span class="translation" id="TranText_28_2">там и сям</span>
+					<span class="translation" id="TranText_28_3">были разбросаны</span>
+					<span class="translation" id="TranText_28_4">дачи</span>
+					. 
+					<span class="translation" id="TranText_29_1">И</span>
+					<span class="translation" id="TranText_29_2">море было</span>
+					<span class="translation" id="TranText_29_3">очень</span>
+					<span class="translation" id="TranText_29_4">близко</span>
+					,
+					<span class="translation" id="TranText_29_5">так что</span>
+					<span class="translation" id="TranText_29_6">для купанья</span>
+					<span class="translation" id="TranText_29_7">местоположение</span>
+					<span class="translation" id="TranText_29_8">было самым удобным</span>
+					.
+				</p>
+				<p>
+					<span class="translation" id="TranText_30_1">Я</span>
+					<span class="translation" id="TranText_30_2">каждый день</span>
+					<span class="translation" id="TranText_30_3">ходил</span>
+					<span class="translation" id="TranText_30_4">к морю</span>
+					<span class="translation" id="TranText_30_5">купаться</span>
+					. 
+					<span class="translation" id="TranText_31_1">Пройдя мимо</span>
+					<span class="translation" id="TranText_31_2">законченных домов с соломенной кровлей</span>
+					,
+					<span class="translation" id="TranText_31_3">я спускался на прибрежные скалы</span>
+					,
+					<span class="translation" id="TranText_31_4">и предо мной на песке</span>
+					<span class="translation" id="TranText_31_5">двигались</span>
+					<span class="translation" id="TranText_31_6">мужчины и женщины</span>
+					,
+					<span class="translation" id="TranText_31_7">бежавшие сюда от жары</span>
+					,
+					—
+					<span class="translation" id="TranText_31_8">двигались в таком количестве</span>
+					,
+					<span class="translation" id="TranText_31_9">что я диву давался</span>
+					,
+					—
+					<span class="translation" id="TranText_31_10">неужто всё Токио</span>
+					<span class="translation" id="TranText_31_11">сюда</span>
+					<span class="translation" id="TranText_31_12">собралось</span>
+					?
+					<span class="translation" id="TranText_32_1">По временам</span>
+					<span class="translation" id="TranText_32_2">всё море</span>
+					<span class="translation" id="TranText_32_3">кишело</span>
+					<span class="translation" id="TranText_32_4">чёрными</span>
+					<span class="translation" id="TranText_32_5">головами</span>
+					,
+					<span class="translation" id="TranText_32_6">как в бассейне дешёвой бани</span>
+					.
+					<span class="translation" id="TranText_33_1">У меня</span>
+					<span class="translation" id="TranText_33_2">не было</span>
+					<span class="translation" id="TranText_33_3">здесь</span>
+					<span class="translation" id="TranText_33_4">знакомых</span>
+					, 
+					<span class="translation" id="TranText_33_5">и я среди</span>
+					<span class="translation" id="TranText_33_6">этой</span>
+					<span class="translation" id="TranText_33_7">оживлённой</span>
+					<span class="translation" id="TranText_33_8">картины</span>
+					<span class="translation" id="TranText_33_9">чувствовал себя прекрасно</span>
+					,
+					<span class="translation" id="TranText_33_10">лёжа</span>
+					<span class="translation" id="TranText_33_11">на песке</span>
+					, 
+					<span class="translation" id="TranText_33_12">наблюдая всё это и откидываясь</span>
+					,
+					<span class="translation" id="TranText_33_13">когда волны</span>
+					<span class="translation" id="TranText_33_14">касались</span>
+					<span class="translation" id="TranText_33_15">моих колен</span>
+					.
+				</p>
+				<p>
+					<span class="translation" id="TranText_34_1">В этой толпе</span>
+					<span class="translation" id="TranText_34_2">я</span>
+					<span class="translation" id="TranText_34_3">повстречался</span>
+					<span class="translation" id="TranText_34_4">с учителем</span>
+					.					
+					<span class="translation" id="TranText_35_1">В то время</span>
+					<span class="translation" id="TranText_35_2">на берегу</span>
+					<span class="translation" id="TranText_35_3">было два</span>
+					<span class="translation" id="TranText_35_4">ресторанчика</span>
+					. 
+					<span class="translation" id="TranText_36_1">Как-то случайно</span>
+					<span class="translation" id="TranText_36_2">я</span>
+					<span class="translation" id="TranText_36_3">пристрастился</span>
+					<span class="translation" id="TranText_36_4">к одному из них</span>
+					. 
+					<span class="translation" id="TranText_37_1">Дачники были здесь иного сорта</span>
+					,
+					<span class="translation" id="TranText_37_2">чем те, что имели в стороне Хасэ свои собственные дачи</span>
+					;
+					<span class="translation" id="TranText_37_3">у них</span>
+					<span class="translation" id="TranText_37_4">не было</span>
+					<span class="translation" id="TranText_37_5">своих</span>
+					<span class="translation" id="TranText_37_6">отдельных</span>
+					<span class="translation" id="TranText_37_7">купальных будочек</span>
+					,
+					<span class="translation" id="TranText_37_8">почему и</span>
+					<span class="translation" id="TranText_37_9">возникла потребность</span>
+					<span class="translation" id="TranText_37_10">в общей раздевальне</span>
+					. 
+					<span class="translation" id="TranText_38_1">Поэтому в этих домиках купающиеся</span>
+					<span class="translation" id="TranText_38_2">пили</span>
+					<span class="translation" id="TranText_38_3">чай</span>
+					,
+					<span class="translation" id="TranText_38_4">здесь же</span>
+					<span class="translation" id="TranText_38_5">отдыхали</span>
+					<span class="translation" id="TranText_38_6">и</span>
+					<span class="translation" id="TranText_38_7">тут же</span>
+					<span class="translation" id="TranText_38_8">отдавали стирать</span>
+					<span class="translation" id="TranText_38_9">свои купальные костюмы</span>
+					;
+					<span class="translation" id="TranText_38_10">здесь же</span>
+					<span class="translation" id="TranText_38_11">они освежали своё</span>
+					<span class="translation" id="TranText_38_12">пропитанное солью</span>
+					<span class="translation" id="TranText_38_13">тело</span>
+					,
+					<span class="translation" id="TranText_38_14">оставляли</span>
+					<span class="translation" id="TranText_38_15">свои шляпы</span>
+					<span class="translation" id="TranText_38_16">и</span>
+					<span class="translation" id="TranText_38_17">зонтики</span>
+					.
+					<span class="translation" id="TranText_39_1">У меня</span>
+					<span class="translation" id="TranText_39_2">не было</span>
+					<span class="translation" id="TranText_39_3">специального купального костюма</span>
+					,
+					<span class="translation" id="TranText_39_4">но и</span>
+					<span class="translation" id="TranText_39_5">я</span>
+					,
+					<span class="translation" id="TranText_39_6">из боязни</span>
+					<span class="translation" id="TranText_39_7">покражи</span>
+					,
+					<span class="translation" id="TranText_39_8">каждый раз</span>
+					<span class="translation" id="TranText_39_9">как</span>
+					<span class="translation" id="TranText_39_10">шёл</span>
+					<span class="translation" id="TranText_39_11">в море</span>
+					,
+					<span class="translation" id="TranText_39_12">оставлял</span>
+					<span class="translation" id="TranText_39_13">в этом чайном домике</span>
+					<span class="translation" id="TranText_39_14">всё снятое с себя</span>
+					.
+				</p>
+			</div>
+		</main>
+		<script src="{% static 'main/js/heart.js' %}"></script>
+	</body>
+</html>

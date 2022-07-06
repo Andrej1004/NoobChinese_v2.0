@@ -1,0 +1,105 @@
+{% load static %}
+<html>
+	<head>
+		
+		<link rel="stylesheet" href="{% static 'main/css/article.css' %}">
+		
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<p id="title-text">{{ paralleltext.slug }}</p>
+				<div class="GoBack">
+					<a href="{% url 'reading' %}"><p>назад</p></a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="helper">
+				<p id="v_word"></p>
+				<p id="v_reading"></p>
+				<p id="v_meaning"></p>
+			</div>
+			<div>
+				<div>
+					<p id="original_text">{{ paralleltext.originalText|safe }}</p>
+				</div>
+				<div>
+					<p id="translation_text">{{ paralleltext.translationText|safe }}</p>
+				</div>
+			</div>
+		</main>
+		<script>
+			let myJSON = {{ paralleltext.mapText|safe }}
+			//console.log(JSON.stringify(myJSON));
+			let mymap = new Map();
+			for (let key in myJSON) {
+				//console.log(key, ':', myJSON[key]);
+				mymap.set(key,myJSON[key]);
+			}
+			let myvocubJSON = {{ paralleltext.vocab_map|safe }}
+			//myvocubJSON = JSON.stringify(myvocubJSON);
+			console.log(myvocubJSON);
+			/*let myvocub = new Map();
+			for (let key in myvocubJSON) {
+				//console.log(key, ':', myvocubJSON[key]);
+				myvocub.set(key,myvocubJSON[key]);
+				console.log("!"+myvocub[key]);
+			}*/
+			let text_words = document.querySelectorAll(".text_words");
+			text_words.forEach(function (word) {
+				word.addEventListener('mouseover',()=>{
+					if (myvocubJSON[word.id]) {
+						console.log("yes");
+						console.log(word.id+" "+myvocubJSON[word.id]);
+						let word_from_vocab =  myvocubJSON[word.id];
+						showHelper (event.pageX,event.pageY,word_from_vocab.word,word_from_vocab.reading,word_from_vocab.meaning);
+					} else {
+						console.log("no");
+						console.log(word.id);
+					}
+					let group = mymap.get(word.id);
+					text_words.forEach(word => {
+					let check = mymap.get(word.id);
+						if (check==group && check != undefined) {
+							word.style.backgroundColor = "red";
+						}
+					})
+				})
+			});
+			text_words.forEach(function (word) {
+				word.addEventListener('mouseout',()=>{
+					hideHelper ();
+					let group = mymap.get(word.id);
+					text_words.forEach(word => {
+						let check = mymap.get(word.id);
+						if (check==group && check != undefined) {
+							word.style.backgroundColor = "white";
+						}
+					})
+				})
+			});
+			function showHelper (x,y,wrd,rdng,mnng) {
+				helper.style.display = "block";
+				helper.style.position = "absolute";
+				helper.style.left = x+"px";
+				helper.style.top = y+"px";
+				let this_word = document.getElementById("v_word");
+				this_word.innerHTML=wrd;
+				let this_reading = document.getElementById("v_reading");
+				this_reading.innerHTML=rdng;
+				let this_meaning = document.getElementById("v_meaning");
+				this_meaning.innerHTML=mnng;
+			}
+			function hideHelper () {
+				helper.style.display = "none";
+				let this_word = document.getElementById("v_word");
+				this_word.innerHTML="";
+				let this_reading = document.getElementById("v_reading");
+				this_reading.innerHTML="";
+				let this_meaning = document.getElementById("v_meaning");
+				this_meaning.innerHTML="";
+			}
+		</script>
+	</body>
+</html>

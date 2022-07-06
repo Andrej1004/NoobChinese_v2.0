@@ -1,0 +1,109 @@
+body {
+	color: black;
+	background: RoyalBlue;
+	background-image: url('pictures/background.jpg');
+	background-attachment: fixed;
+	width: 100%;
+	height: auto;
+	background-position: center;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.GoBack {
+	background: darkorange;;
+	height: 50px;
+	width: 75px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.GoBack p {
+	color: black;
+	text-align: center;
+	font-family: cursive;
+}
+
+.GoBack:hover {
+	background: yellow;
+}
+
+.ShowOrHideExamples {
+	float: right;
+	background: red;
+	height: 75px;
+	width: 100px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.ShowOrHideExamples p {
+	color: black;
+	text-align: center;
+	font-family: cursive;
+}
+
+.ShowOrHideExamples:hover {
+	background: yellow;
+}
+
+.wordsList {
+	background: white;
+	color: black;
+	border-radius: 10px;
+	width: 70%;
+	margin-left: 10%;
+	opacity: 0.8;
+}
+
+.chinese {
+	width: 40%;
+	font-size: 2em;
+	font-family: FangSong;
+	text-align: right;
+}
+
+.pinyin {
+	width: 30%;
+	font-size: 1.5em;
+	font-family: cursive;
+	text-align: center;
+}
+
+.translation {
+	width: 30%;
+	font-size: 1.5em;
+	font-family: cursive;
+	text-align: left;
+}
+
+.button {
+	background: SlateBlue;
+	height: 51px;
+	width: 20%;
+	margin: 5px;
+	margin-left: 10%;
+	border-radius: 5px;
+}
+
+.button p {
+	color: White;
+	text-align: center;
+	font-family: cursive;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	background: MediumPurple;
+}
+
+.word:hover {
+	font-size: 1.1em;
+}
+
+.example {
+	color: RoyalBlue;
+}
