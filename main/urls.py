@@ -6,6 +6,7 @@ urlpatterns = [
     path('hanzi_hsk_1', views.hanzi_hsk_1, name='hanzi_hsk_1'),
     path('hanzi_hsk_2', views.hanzi_hsk_2, name='hanzi_hsk_2'),
     path('hanzi_hsk_3', views.hanzi_hsk_3, name='hanzi_hsk_3'),
+    path('hanzi_hsk_4', views.hanzi_hsk_4, name='hanzi_hsk_4'),
     path('kak_uchit_yazuk', views.kak_uchit_yazuk, name='kak_uchit_yazuk'),
     path('spaced_repetition', views.spaced_repetition, name='spaced_repetition'),
     path('words_hsk_1_3', views.words_hsk_1_3, name='words_hsk_1_3'),

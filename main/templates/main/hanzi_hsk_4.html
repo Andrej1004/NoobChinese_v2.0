@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+	<head>
+		<title>HanZiHSK4</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="{% static 'main/css/Hanzi-4.css' %}">
+	</head>
+	<body>
+		<header>
+			<div class="GoBack">
+				<a href="{% url 'home' %}"><p>на главную</p></a>
+			</div>
+		</header>
+		<main>
+			<div class="grid-1">
+				{% for zi in hanzi %}
+				<div class="grid-2">
+					<div class="hanzi"><p>{{ zi.character }}</p></div>
+					<div class="HanZiDict"><p>{{ zi.reading }}</p></div>
+					<div class="translation">{{ zi.translation }}<p></p></div>
+				</div>
+				{% endfor %}
+			</div>
+		</main>
+	</body>
+</html>

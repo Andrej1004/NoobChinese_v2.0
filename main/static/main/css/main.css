@@ -1,11 +1,12 @@
 body {
 	margin: 0;
-	background: RoyalBlue;
+	background: white;
 	background-image: url('pictures/background.jpg');
 	background-attachment: fixed;
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	background-position: center;
+	background-size: cover;
 }
 
 #about {
@@ -21,7 +22,7 @@ body {
 
 #about p {
 	color: black;
-	font-family: cursive;
+	font-family: sans-serif;
 }
 
 .aboutTitle {
@@ -55,13 +56,13 @@ a {
 	left: 0px;
 	top: -5px;
 	width: 90;
-} 
+}
 
 #title p {
 	position: absolute;
 	left: 100px;
 	top: -20px;
-} 
+}
 
 #mainMenu {
 	background: black;
@@ -165,5 +166,5 @@ a {
 	color: white;
 	font-size: 1.5em;
 	margin-left: 5%;
-	font-family: cursive;
+	font-family: sans-serif;
 }

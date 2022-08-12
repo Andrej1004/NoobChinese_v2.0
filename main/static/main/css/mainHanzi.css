@@ -1,19 +1,25 @@
+@font-face {
+    font-family: 'chinese';
+    src: url('../fonts/chinese.ttf');
+}
+
 body {
 	color: black;
-	background: RoyalBlue;
+	background: white;
 	background-image: url('pictures/background.jpg');
 	background-attachment: fixed;
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	background-position: center;
+	background-size: cover;
 	margin: 0;
 }
 
 table {
 	width: 75%;
 	float: center;
-	background: white;
-	opacity: 0.8;
+	background: #ebd5b3;
+	opacity: 1;
 	border-radius: 15px;
 }
 
@@ -21,11 +27,12 @@ table {
 	font-size: 1.5em;
 	text-align: left;
 	margin: 0.5em;
+	font-family: sans-serif;
 }
 
 .HanZi {
 	font-size: 4em;
-	font-family: FangSong;
+	font-family: 'chinese';
 }
 
 a {
@@ -43,7 +50,7 @@ a {
 .GoBack p {
 	color: black;
 	text-align: center;
-	font-family: cursive;
+	font-family: sans-serif;
 }
 
 .GoBack:hover {

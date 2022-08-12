@@ -1,12 +1,13 @@
 body {
-	background: RoyalBlue;
+	background: white;
 	background-image: url('pictures/background.jpg');
 	background-attachment: fixed;
 	margin: 0;
 	padding: 0%;
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	background-position: center;
+	background-size: cover;
 }
 
 a {
@@ -24,7 +25,7 @@ a {
 .GoBack p {
 	color: black;
 	text-align: center;
-	font-family: cursive;
+	font-family: sans-serif;
 }
 
 .GoBack:hover {
@@ -52,7 +53,7 @@ a {
 #helper p {
 	color: white;
 	text-align: center;
-	font-family: "MS Gothic";
+	font-family: sans-serif;
 	font-size: 1.2em;
 }
 
@@ -70,11 +71,11 @@ a {
 }
 
 #original-text {
-	font-family: "MS Gothic";
+	font-family: sans-serif;
 	font-size: 1.2em;
 }
 
 #translation-text {
-	font-family: cursive;
-	font-size: 0.9em;
+	font-family: sans-serif;
+	font-size: 1.25em;
 }

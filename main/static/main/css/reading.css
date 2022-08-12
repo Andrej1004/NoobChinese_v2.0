@@ -1,12 +1,13 @@
 body {
 	margin: 0;
 	padding: 0%;
-	background: RoyalBlue;
+	background: white;
 	background-image: url('pictures/background.jpg');
 	background-attachment: fixed;
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	background-position: center;
+	background-size: cover;
 }
 
 a {
@@ -36,7 +37,7 @@ a {
 .GoBack p {
 	color: black;
 	text-align: center;
-	font-family: cursive;
+	font-family: sans-serif;
 }
 
 .GoBack:hover {
@@ -66,7 +67,7 @@ a {
 	margin-bottom: 5%;
 	padding: 5%;
 	font-size: 1.2em;
-	font-family: cursive;
+	font-family: sans-serif;
 	text-align: center;
 }
 
@@ -82,7 +83,7 @@ a {
 .button p {
 	color: White;
 	text-align: center;
-	font-family: cursive;
+	font-family: sans-serif;
 	text-transform: uppercase;
 }
 

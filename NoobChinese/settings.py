@@ -25,7 +25,7 @@ SECRET_KEY = '2w#dl544spike)694b^mil!7)8ugeub5&(ux7n)5u#y+$$3hk*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -135,6 +135,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
 	BASE_DIR/"static",
 ]
+
+STATIC_ROOT = '/home/noobchinese/NoobChinese_v2.0/main/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

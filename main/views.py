@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import DetailView
-from .models import ParallelText
+from .models import ParallelText, HanZi
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -17,6 +17,10 @@ def hanzi_hsk_2(request):
 
 def hanzi_hsk_3(request):
 	return render(request,'main/hanzi_hsk_3.html')
+
+def hanzi_hsk_4(request):
+        hanzi = HanZi.objects.all()
+        return render(request,'main/hanzi_hsk_4.html',{'hanzi': hanzi})
 
 def kak_uchit_yazuk(request):
 	return render(request,'main/kak_uchit_yazuk.html')

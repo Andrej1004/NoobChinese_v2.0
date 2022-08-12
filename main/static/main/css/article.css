@@ -1,12 +1,13 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: RoyalBlue;
+	background: white;
 	background-image: url('pictures/background.jpg');
 	background-attachment: fixed;
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
 	background-position: center;
+	background-size: cover;
 }
 
 a {
